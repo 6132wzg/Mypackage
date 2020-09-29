@@ -1,0 +1,32 @@
+.DS_Store
+node_modules
+/dist
+public/release.json
+docs/.vuepress/dist
+src/router/auto-generated-routes.ts
+src/style/_views.less
+mock/**
+!mock/.gitkeep
+
+package-lock.json
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+inspect.js
+
+src/views/pages/test/*
+!src/views/pages/test/.gitkeep
