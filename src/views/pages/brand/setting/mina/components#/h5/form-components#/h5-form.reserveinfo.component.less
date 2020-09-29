@@ -1,0 +1,48 @@
+.h5-form-reserveinfo-component {
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgba(37, 42, 46, 1);
+  }
+  &__desc {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: @text-light;
+  }
+  &__list {
+    margin-top: 22px;
+  }
+  &__box-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__box {
+    border: 1px solid @divider;
+    cursor: move;
+    .mg-b(24px);
+    .mg-r(16px);
+    width: 248px;
+    &-title {
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid @divider;
+      background: @index-reserve-title-bg;
+    }
+  }
+  &__content {
+    height: 64px;
+    padding: 16px;
+    color: @index-reserve-color;
+    .st-input input.ant-input:not(:last-child) {
+      padding-right: 43px;
+    }
+  }
+  &__input {
+    display: inline-block;
+    width: calc(100% - 75px);
+  }
+}

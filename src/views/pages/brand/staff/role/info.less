@@ -1,0 +1,68 @@
+.page-role-detail {
+  .ant-tree.ant-tree-show-line li:not(:last-child):before {
+    border-left: 0;
+  }
+  width: 100%;
+  padding: 0 24px;
+  .page-role-info-item {
+    display: flex;
+    padding: 24px 0;
+    border-bottom: 1px solid @divider;
+    box-sizing: border-box;
+    .label {
+      vertical-align: middle;
+      line-height: 22px;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-right: 12px;
+    }
+    .value {
+      font-size: 14px;
+      color: @text;
+      line-height: 22px;
+    }
+  }
+  &__funrole {
+    padding: 25px 0;
+    display: flex;
+    .ant-tree.ant-tree-show-line li:not(:last-child):before {
+      border-left: 0;
+    }
+    .label {
+      vertical-align: middle;
+      line-height: 22px;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: @title;
+        line-height: 22px;
+      }
+    }
+    .jurisdiction {
+      flex: 1;
+      display: flex;
+      margin-left: 12px;
+      .brand-list {
+        margin-right: 12px;
+      }
+      .shop-list,
+      .brand-list {
+        flex: 1;
+        height: 500px;
+        overflow-y: auto;
+      }
+      .shop-list::-webkit-scrollbar,
+      .brand-list::-webkit-scrollbar {
+        display: none;
+      }
+      .brand-list-title {
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.shop-member-info {
+  &-title {
+    margin-bottom: 12px;
+    // height: 200px;
+    .bg(#fff);
+    .pd(24px);
+  }
+
+  &-title-pannel-left {
+    display: flex;
+  }
+
+  &-title-pannel__img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-box {
+    position: relative;
+    &:hover {
+      .img-remove {
+        display: block;
+      }
+    }
+  }
+
+  .img-url {
+    width: 104px;
+    height: 104px;
+  }
+
+  .img-describe {
+    position: absolute;
+    width: 100%;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    bottom: 0px;
+    left: 0px;
+    background: rgba(@black, 0.45);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .img-remove {
+    .pos-a;
+    .s(16px, 16px);
+    top: 8px;
+    right: 8px;
+    background: url('~@/assets/img/icon_delete@2x.png') no-repeat;
+    background-size: 100% 100%;
+    display: none;
+  }
+
+  .input-face {
+    margin-top: 12px;
+    width: 104px;
+    text-align: center;
+
+    .anticon-plus {
+      padding-right: 8px;
+    }
+  }
+
+  &-title-pannel__info {
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-title-pannel__info__phone {
+    display: flex;
+    margin-top: 16px;
+  }
+
+  .line {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: rgba(@black, 0.25);
+    margin: 4px 8px 0 8px;
+  }
+
+  .label-list {
+    margin-top: 16px;
+
+    .tag-item {
+      display: inline-block;
+      line-height: 20px;
+      height: 22px;
+      padding: 0 7px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid @border-color;
+      background-color: #fafafa;
+      font-size: 12px;
+      margin-right: 8px;
+    }
+  }
+
+  .add-lable {
+    .add-lable-item {
+      padding: 3px 8px;
+      background: @bg-gray;
+      border-radius: 4px;
+      border: 1px dashed @border-color;
+    }
+  }
+
+  &-title-pannel-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pannel-right__operation {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .pannel-right__operation__margin {
+    margin-left: 8px;
+  }
+
+  .pannel-right__num__box {
+    margin-top: 16px;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .pannel-right__num {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .pannel-right__num__margin {
+    padding: 0 6px 0 0;
+  }
+}

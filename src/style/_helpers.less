@@ -1,0 +1,146 @@
+@gutters: 0, 4, 6, 8, 12, 16, 20, 24, 32, 36, 40, 48, 56, 64;
+.generate-spaces();
+.generate-spaces(@i: 1) when (@i =< length(@gutters)) {
+  @n: extract(@gutters, @i);
+  #body {
+    .mg-t@{n} {
+      .mg-t(1px * @n);
+    }
+    .mg-b@{n} {
+      .mg-b(1px * @n);
+    }
+    .mg-l@{n} {
+      .mg-l(1px * @n);
+    }
+    .mg-r@{n} {
+      .mg-r(1px * @n);
+    }
+    .mg-x@{n} {
+      .mg-l(1px * @n);
+      .mg-r(1px * @n);
+    }
+    .mg-y@{n} {
+      .mg-t(1px * @n);
+      .mg-b(1px * @n);
+    }
+    .mg-@{n} {
+      .mg(1px * @n);
+    }
+    .pd-@{n} {
+      .pd(1px * @n);
+    }
+    .pd-t@{n} {
+      .pd-t(1px * @n);
+    }
+    .pd-b@{n} {
+      .pd-b(1px * @n);
+    }
+    .pd-l@{n} {
+      .pd-l(1px * @n);
+    }
+    .pd-r@{n} {
+      .pd-r(1px * @n);
+    }
+    .pd-x@{n} {
+      .pd-lr(1px * @n);
+    }
+    .pd-y@{n} {
+      .pd-tb(1px * @n);
+    }
+  }
+  .generate-spaces(@i + 1);
+}
+.text-line(@n: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @n;
+  overflow: hidden;
+}
+
+#body {
+  .fl-r {
+    float: right;
+  }
+  .ta-r {
+    text-align: right;
+  }
+  .ta-c {
+    text-align: center;
+  }
+  .ta-l {
+    text-align: left;
+  }
+  .d-n {
+    display: none;
+  }
+}
+.font-number {
+  font-family: 'DINAlternate-Bold', 'bebas';
+}
+#body {
+  // 用于修复表格组件的异常行为 新增到表格容器类中即可
+  .tablefix {
+    overflow: hidden;
+  }
+  .full-width {
+    .d-b;
+    width: 100% !important;
+  }
+  .cursor-pointer {
+    .cur-p;
+  }
+  .color-title {
+    .c(@title);
+  }
+  .color-text {
+    .c(@text);
+  }
+  .color-text-light {
+    .c(@text-light);
+  }
+  .color-primary {
+    .c(@primary-color);
+  }
+  .color-danger {
+    .c(@error-color);
+  }
+  .color-success {
+    .c(@success-color);
+  }
+  .color-warning {
+    .c(@warning-color);
+  }
+  .bg-white {
+    .bg(@white);
+  }
+  .bg-gray {
+    .bg(@bg-gray);
+  }
+  .bordered {
+    border: 1px solid @border-color;
+  }
+  .align-items-center {
+    display: flex;
+    align-items: center;
+  }
+  .font-number {
+    font-family: 'DINAlternate-Bold', 'bebas';
+  }
+  .word-break {
+    word-break: break-all;
+  }
+  .white-nowrap {
+    white-space: nowrap;
+  }
+  .text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .text-line1 {
+    .text-line(1);
+  }
+  .text-line2 {
+    .text-line();
+  }
+}

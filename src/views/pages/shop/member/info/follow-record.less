@@ -1,0 +1,58 @@
+.member-follow-record {
+  margin-left: 120px;
+  margin-top: 8px;
+  &:first-child {
+    margin-top: 10px;
+  }
+  &__timeline-item {
+    height: 46px;
+    margin-left: 12px;
+    margin-bottom: 6px;
+    line-height: 46px;
+    border-radius: 4px;
+    padding-left: 20px;
+    border: 1px solid @divider;
+    font-size: 14px;
+    color: @title;
+  }
+  .member-follow-record__timeline-item::before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border: 6px solid transparent;
+    border-right: 6px solid #ddd;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+  }
+  .member-follow-record__timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 1px;
+    border: 6px solid transparent;
+    border-right: 6px solid #fff;
+  }
+  &__timeline-position {
+    position: absolute;
+    left: -120px;
+    top: 10px;
+    line-height: 24px;
+    text-align: right;
+  }
+  .ant-timeline-item-head-blue {
+    margin-top: 10px;
+  }
+  .ant-timeline-item-head {
+    background-color: @primary-color;
+    border: 2px solid #fff;
+  }
+  .ant-timeline-item-content {
+    top: -8px;
+  }
+  .date {
+    display: block;
+    line-height: 20px;
+    color: @text-light;
+  }
+}

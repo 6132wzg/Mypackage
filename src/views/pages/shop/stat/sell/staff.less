@@ -1,0 +1,73 @@
+.page-shop-stat-staff {
+  &__panne {
+    padding: 15px;
+  }
+  &__section {
+  }
+  .st-table .ant-table-tbody > tr > td {
+    word-break: break-all;
+  }
+  .st-table .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    .ant-table-body {
+      min-width: 1470px;
+      overflow: hidden;
+    }
+    .ant-table-expanded-row .ant-table {
+      width: auto;
+      overflow: auto;
+      .ant-table-body {
+        min-width: auto;
+        overflow: hidden;
+      }
+    }
+  }
+  &__table-nodata {
+    .ant-table .ant-table-content .ant-table-body {
+      min-width: auto;
+    }
+  }
+  .flex-1 {
+    flex: 1 1 auto;
+  }
+  .flex-0 {
+    flex: 0 0 auto;
+  }
+}
+.page-shop-stat-header {
+  &__title {
+    font-weight: 500;
+    color: @title;
+    line-height: 32px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__button-wapper {
+    margin-right: 12px;
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    & > * {
+      margin-right: 12px;
+      margin-bottom: 16px;
+      flex: 1 1 auto;
+      &:last-child {
+        margin-right: 0;
+        flex: 0 0 auto;
+      }
+    }
+  }
+  &__actions-span {
+    color: @text-light;
+    background: @bg-gray;
+    border-radius: 4px;
+    .pd(0 16px);
+    line-height: 32px;
+  }
+}

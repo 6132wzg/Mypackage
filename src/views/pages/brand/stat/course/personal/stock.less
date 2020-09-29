@@ -1,0 +1,34 @@
+.page-brand-stock-personal-course {
+  &__section {
+    display: flex;
+    flex-direction: column;
+  }
+  &__panne {
+    padding: 0;
+  }
+  &__desc-card {
+    margin-bottom: 24px;
+  }
+
+  .st-table .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    .ant-table-body {
+      min-width: 1920px;
+      overflow: hidden;
+    }
+    .ant-table-expanded-row .ant-table {
+      width: auto;
+      overflow: auto;
+      .ant-table-body {
+        min-width: auto;
+        overflow: hidden;
+      }
+    }
+  }
+  &__table-nodata {
+    .ant-table .ant-table-content .ant-table-body {
+      min-width: auto;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+/* 设置滚动条的样式 */
+.h5-phone-component::-webkit-scrollbar {
+  display: none;
+}
+.h5-phone-component {
+  background-color: @white;
+  border-radius: 86px;
+  box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.3);
+  height: 1448px;
+  width: 750px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 32px solid @black;
+  box-sizing: content-box;
+  // 首页
+  &__index {
+    position: relative;
+    padding-top: 88px;
+    &__header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 88px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 54px;
+      }
+    }
+    &__content {
+      background-color: @white;
+      width: 750px;
+      min-height: 1360px;
+      overflow: hidden;
+      border-radius: 0 0 54px 54px;
+    }
+    &__swiper {
+      height: 1360px;
+    }
+    &__slider {
+      height: auto;
+      &-content {
+        background-color: @white;
+      }
+      &-nodata {
+        .ta-c;
+        .fz(28px);
+        .c(@text-light);
+      }
+    }
+  }
+  // 预约
+  &__reserve {
+    &__border-select {
+      border: 8px solid @primary-color;
+    }
+    &__content {
+      background-color: #f9f9f9;
+      border-radius: 54px;
+      width: 750px;
+      min-height: 1448px;
+      overflow: hidden;
+    }
+  }
+  // tabbar
+  &__nav {
+    display: flex;
+    .pos-a();
+    bottom: 28px;
+    left: 105px;
+    right: 102px;
+    margin-left: -73px;
+    .bg(#fff);
+    .pd-t(11px);
+    z-index: 1;
+    border-radius: 0 0 60px 60px;
+    width: 750px;
+    .nav-li {
+      flex: 1;
+      .ta-c();
+      .fz(20px);
+      .lh(28px);
+    }
+    img {
+      .s(44px, 44px);
+    }
+    &-home {
+      position: absolute;
+      .s(96px, 3px);
+      background-color: #000;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

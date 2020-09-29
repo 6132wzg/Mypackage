@@ -1,0 +1,45 @@
+.brand-app-pos-wait-pay {
+  &__countdown {
+    .s(86px, 86px);
+    .mg(0 auto 24px);
+    background: url('~@/assets/img/brand/countdown_wait-pay@2x.png') no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: bold;
+    color: rgba(255, 94, 65, 1);
+    line-height: 24px;
+  }
+  &__desc {
+    font-size: 16px;
+    color: rgba(37, 42, 46, 1);
+    line-height: 24px;
+    .mg-b(16px);
+    text-align: center;
+  }
+  &__status {
+    font-size: 16px;
+    color: rgba(155, 172, 185, 1);
+    line-height: 24px;
+    text-align: center;
+  }
+  &__tip {
+    font-size: 14px;
+    color: rgba(155, 172, 185, 1);
+    line-height: 20px;
+    div {
+      .mg-b(16px);
+      text-align: center;
+    }
+    span {
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 500;
+      color: rgba(63, 102, 246, 1);
+      .mg-l(8px);
+      cursor: pointer;
+    }
+  }
+}

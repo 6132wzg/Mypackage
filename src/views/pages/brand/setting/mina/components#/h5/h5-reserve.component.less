@@ -1,0 +1,110 @@
+.h5-reserve {
+  height: 1448px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &__border-select {
+    border: 8px solid @primary-color;
+  }
+  &__title {
+    .h(120px);
+    .ta-c();
+    .lh(150px);
+    font-weight: bold;
+    .fz(37px);
+    margin: 0 auto;
+    border-radius: 50px 50px 0 0;
+    background-image: url('~@/assets/img/brand/setting/mina/nav_bg_white.png');
+    background-size: 100%;
+    width: 100%;
+    .pos-r();
+    &-img {
+      .pos-a();
+      top: 0;
+      left: 0;
+      .w(100%);
+    }
+  }
+  &__header {
+    padding: 0 40px;
+    position: relative;
+    .bg(@white);
+    width: 100%;
+  }
+  &__tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    width: calc(100% - 130px);
+    overflow-x: auto;
+
+    &-item {
+      flex: none;
+      min-width: 150px;
+      height: 70px;
+      .ta-c;
+      .lh(70px);
+      font-size: 32px;
+      cursor: pointer;
+      margin: 16px 16px 16px 0;
+      padding: 0 20px;
+      &.active_tab {
+        color: @primary-color;
+        background: rgba(196, 208, 255, 0.25);
+      }
+    }
+    .ant-tabs-nav {
+      .ant-tabs-tab {
+        border: none;
+        font-size: 24px;
+      }
+    }
+  }
+  &__filter {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 32px;
+    width: 130px;
+    .ta-c;
+    background-color: white;
+    color: #222;
+    height: 70px;
+    line-height: 70px;
+  }
+  &__content {
+    width: 100%;
+    flex: 1;
+    background: url('~@/assets/img/brand/setting/mina/reserve_content_bg.png')
+      no-repeat;
+    background-size: 100% 65%;
+    background-color: @table-bg-color-row-2;
+  }
+  &__nav {
+    display: flex;
+    .pos-a();
+    bottom: 0;
+    left: 105px;
+    right: 102px;
+    .bg(#fff);
+    .pd-t(11px);
+    z-index: 1;
+    border-radius: 0 0 60px 60px;
+    .nav-li {
+      flex: 1;
+      .ta-c();
+      .fz(20px);
+      .lh(28px);
+    }
+    img {
+      .s(44px, 44px);
+    }
+    &-home {
+      position: absolute;
+      .s(96px, 3px);
+      background-color: #000;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

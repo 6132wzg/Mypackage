@@ -1,0 +1,109 @@
+.shop-member-crowd-index-box {
+  display: flex;
+  background: rgba(240, 242, 245, 1);
+  margin-bottom: 12px;
+  box-shadow: 0px 1px 10px 1px rgba(@black, 0.05);
+  border-radius: 2px;
+
+  &-title {
+    height: 260px;
+    flex: 1;
+    background: @white;
+    box-shadow: 0px 1px 10px 1px rgba(@black, 0.05);
+    border-radius: 2px;
+    &.middile {
+      margin: 0 12px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding: 32px 28px 0 32px;
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  &__fresh {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+  }
+
+  &__img {
+    width: 72px;
+    height: 72px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__info__title {
+    padding-bottom: 8px;
+    height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  &-new__crowb_num {
+    margin-left: 10px;
+    font-weight: 100;
+  }
+
+  &__num {
+    display: flex;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+
+  &__num-item-middle {
+    margin: auto;
+  }
+
+  &__number {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-family: Arial-BoldMT;
+    font-weight: normal;
+    color: @title;
+  }
+
+  &__num-describe {
+    color: @text-light;
+  }
+
+  &__btn {
+    height: 41px;
+    background: @bg-gray;
+  }
+
+  &__btn-rq {
+    cursor: pointer;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    width: 50%;
+    margin: 8px 0;
+    text-align: center;
+  }
+  &__btn-rq-line {
+    border-right: 1px solid @divider;
+  }
+
+  &__btn-dx {
+    cursor: pointer;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;
+    width: 50%;
+    margin: 8px 0;
+    text-align: center;
+  }
+}

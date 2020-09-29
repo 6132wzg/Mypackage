@@ -1,0 +1,91 @@
+.item {
+  cursor: pointer;
+}
+.tree-node {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .tree-input {
+    .s(144px, 28px);
+  }
+  .edit-box {
+    text-align: right;
+    .fz(12px);
+    box-sizing: border-box;
+    .edit {
+      color: @link-color;
+    }
+    .st-icon {
+      color: @border-color !important;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 4px 20px;
+    height: 36px;
+    margin-bottom: 1px;
+  }
+  &__content:hover {
+    background: rgba(240, 246, 255, 1);
+  }
+  .active {
+    background: rgba(240, 246, 255, 1);
+    &:hover {
+      background: rgba(240, 246, 255, 1);
+    }
+  }
+  .active ~ .tree-node__content {
+    background: rgba(240, 246, 255, 1);
+    .st-icon {
+      color: @border-color !important;
+    }
+    .fz(12px);
+    box-sizing: border-box;
+    .edit {
+      color: @link-color;
+    }
+  }
+  .tree-name {
+    .fz(12px);
+    font-weight: 400;
+    color: rgba(@black, 0.85);
+    line-height: 17px;
+  }
+  .tree-name.first {
+    .fz(14px);
+    font-weight: 500;
+    color: rgba(@black, 0.85);
+    line-height: 17px;
+  }
+  .tree-opreation {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    z-index: 1;
+  }
+  // .tree-opreation.active .st-icon{
+  //   color: #fff !important;
+  // }
+  .tree-switch {
+    .s(16px, 16px);
+    .mg-r(8px);
+    .lh(16px);
+    .ta-c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: @divider;
+    font-weight: 500;
+    .st-icon {
+      transform: scale(0.9);
+    }
+    color: @text-light;
+    &__empty {
+      .s(16px, 16px);
+      display: block;
+      .mg-r(8px);
+    }
+  }
+}

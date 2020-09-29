@@ -1,0 +1,37 @@
+.st-textarea {
+  .pos-r;
+  border: 1px solid #ddd;
+  padding-bottom: 37px;
+  border-radius: 4px;
+  outline: none !important;
+  transition: border 0.3s;
+  &__content {
+    .pd(8px 12px 32px);
+    background: transparent;
+    position: relative;
+    border: 0;
+    z-index: 2;
+    resize: none;
+  }
+  &__label {
+    position: absolute !important;
+    right: 16px;
+    bottom: 8px;
+    .fz(14px);
+    .c(@text-light);
+  }
+  &__suffix {
+    position: absolute !important;
+    left: 8px;
+    bottom: 8px;
+    .fz(14px);
+    .c(@text-light);
+  }
+  .ant-input:focus {
+    box-shadow: none;
+  }
+}
+
+.ant-form-item-control.has-error .st-textarea {
+  border-color: @error-color;
+}

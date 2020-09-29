@@ -1,0 +1,106 @@
+.brand-app-pos-device {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    border: 1px solid #e6e9ef;
+    background: rgba(255, 255, 255, 1);
+    .mg-b(24px);
+    &-add {
+      border: 1px dashed #e6e9ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      color: rgba(155, 172, 185, 1);
+      line-height: 24px;
+      height: 210px;
+      box-sizing: border-box;
+      &__tip {
+        font-size: 16px;
+        color: rgba(155, 172, 185, 1);
+        line-height: 24px;
+      }
+    }
+    &-add:hover {
+      cursor: pointer;
+      border-color: #3f66f6;
+      .brand-app-pos-device__item-add__tip {
+        color: #3f66f6;
+      }
+    }
+  }
+  &__item:hover {
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.09);
+    .brand-app-pos-device__action {
+      cursor: pointer;
+      color: #3f66f6;
+    }
+  }
+  &__info {
+    .pd(24px 16px 16px);
+    &-base {
+      display: flex;
+      .mg-b(26px);
+      img {
+        .s(44px, 44px);
+      }
+      &-sub {
+        display: flex;
+        flex-direction: column;
+        .mg-l(8px);
+        &-device-name {
+          font-size: 16px;
+          font-family: PingFangSC-Medium, PingFang SC;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+          line-height: 24px;
+        }
+        &-device-id {
+          font-size: 12px;
+          color: rgba(155, 172, 185, 1);
+          line-height: 20px;
+        }
+      }
+    }
+    &-detail {
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        &-label {
+          font-size: 14px;
+          color: rgba(155, 172, 185, 1);
+          line-height: 22px;
+        }
+        &-value {
+          font-size: 14px;
+          color: rgba(62, 77, 92, 1);
+          line-height: 22px;
+        }
+      }
+      &-item:nth-of-type(1) {
+        .mg-b(8px);
+      }
+    }
+  }
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(247, 249, 252, 1);
+    border-radius: 0px 0px 2px 2px;
+    height: 48px;
+    box-shadow: 0px -1px 0px 0px rgba(230, 233, 239, 1);
+    &-item {
+      flex: 1;
+      .pos-r;
+      height: 24px;
+      font-size: 14px;
+      color: rgba(62, 77, 92, 1);
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}

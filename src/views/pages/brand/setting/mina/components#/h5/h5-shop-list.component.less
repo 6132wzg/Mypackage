@@ -1,0 +1,56 @@
+.h5-shop-list-component {
+  padding-left: 24px;
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+  &__shop {
+    font-size: 20px;
+    color: #252a2e;
+    font-weight: 500;
+    line-height: 76px;
+    margin-right: 8px;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid #cdd4df;
+    cursor: pointer;
+    &--up {
+      transform: rotate(180deg);
+    }
+  }
+  &__overlay {
+    max-height: 360px;
+    overflow-y: auto;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background: #fff;
+    &--item {
+      width: 260px;
+      font-size: 14px;
+      line-height: 36px;
+      background: #fff;
+      cursor: pointer;
+      &-name {
+        width: 260px;
+        padding: 0 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &--active {
+        background: #ebeffe;
+        color: #252a2e;
+      }
+    }
+  }
+  .setting-shop-list__dropdown {
+    top: 58px !important;
+    left: 24px !important;
+  }
+}

@@ -1,0 +1,179 @@
+.page-login-wapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f8f8f8;
+  min-height: 760px;
+  .page-login-logo {
+    position: absolute;
+    top: 23px;
+    left: 47px;
+    height: 37px;
+    width: 161px;
+  }
+  .page-login-ch-en {
+    position: absolute;
+    height: 72px;
+    .lh(72px);
+    top: 0;
+    right: 0;
+    > span {
+      .fz(14px);
+      .c(rgba(@black, 0.45));
+      cursor: pointer;
+      &.active {
+        .c(rgba(@black, 0.75));
+      }
+    }
+  }
+  .page-login {
+    .s(1000px, 550px);
+    .bg(#fff);
+    box-shadow: 0px 0px 20px 0px rgba(196, 193, 219, 0.2);
+    border-radius: 4px;
+    display: flex;
+    position: relative;
+    .page-login-bg-title {
+      position: absolute;
+      top: -11px;
+      left: 0;
+      z-index: 1;
+      width: 193px;
+      height: 46px;
+    }
+    .page-switch-login-type {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 72px;
+      height: 72px;
+      background: url('https://styd-frontend.oss-cn-shanghai.aliyuncs.com/images/icon-login-type-switch.png')
+        0 -72px~ '/' 144px 144px no-repeat;
+      &.qrcode-login {
+        background-position-x: -72px;
+      }
+      &:hover {
+        background-position-y: 0;
+      }
+    }
+    .page-switch-bind {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 72px;
+      height: 72px;
+      background: url('~@/assets/img/bind-back.png') no-repeat;
+      &:hover {
+        background: url('~@/assets/img/bind-back-hover.png') no-repeat;
+      }
+    }
+  }
+  .lf {
+    position: relative;
+    .w(491px);
+    .h(100%);
+    &-help {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0;
+      .item {
+        padding: 0 22px;
+        a {
+          .fz(12px);
+          .c(rgba(@white, 0.45));
+        }
+      }
+    }
+    &-copyright {
+      margin-bottom: 36px;
+      .fz(12px);
+      font-weight: 400;
+      .c(rgba(@white, 0.45));
+      .lh(20px);
+    }
+    &-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      .s(491px, 550px);
+      background: url('~@/assets/img/login-bg.png') top center no-repeat;
+      background-size: cover;
+    }
+  }
+  .book {
+    background-color: #fff;
+    transform: rotateX(30deg);
+  }
+  .preserve-3d {
+    /*transform-style属性指定了，该元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化。*/
+    transform-style: preserve-3d;
+  }
+  .rt {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    .mg-t(118px);
+  }
+  .st-icon {
+    color: #fff;
+  }
+  .page-login-footer {
+    position: absolute;
+    bottom: 23px;
+    &__text {
+      margin-bottom: 9px;
+      text-align: center;
+      color: @text;
+      .fz(14px);
+      font-weight: 400;
+      .lh(20px);
+    }
+    &__copyright {
+      .fz(12px);
+      color: @text-light;
+    }
+  }
+}
+@keyframes mymove {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 32px;
+  }
+}
+.page-login-tabs {
+  display: flex;
+  .w(336px);
+  .page-login-tab-item {
+    + .page-login-tab-item {
+      margin-left: 48px;
+    }
+    position: relative;
+    .cur-p;
+    .fz(16px);
+    .c(@text-light);
+    .lh(22px);
+    padding-bottom: 12px;
+
+    &--active {
+      font-weight: 500;
+      .c(@title);
+      &:before {
+        content: '';
+        .s(32px, 4px);
+        animation: mymove 0.3s;
+        display: inline-block;
+        .bg(@primary-color);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}

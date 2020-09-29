@@ -1,0 +1,75 @@
+.brand-plagin-member-points-setting {
+  .tip {
+    font-size: 12px;
+    color: #758ba3;
+    line-height: 22px;
+  }
+  &__tip {
+    display: flex;
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #758ba3;
+      cursor: pointer;
+      .st-icon {
+        border: 1px solid #758ba3;
+        border-radius: 11px;
+      }
+      &:hover {
+        color: #193d65;
+        .st-icon {
+          border: 1px solid #193d65;
+        }
+      }
+    }
+  }
+  &__rule {
+    // max-width: 800px;
+    background: #f7f9fc;
+    padding: 24px;
+    &-item {
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #3e4d5c;
+        line-height: 22px;
+      }
+      .ant-checkbox-group {
+        display: flex;
+        flex-direction: column;
+      }
+      .ant-checkbox-wrapper {
+        display: flex;
+        align-items: center;
+      }
+      .checkbox-content {
+        display: flex;
+        align-items: center;
+        &__text {
+          width: 100px;
+        }
+      }
+      &-action {
+        .ant-checkbox-group {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .ant-checkbox-wrapper {
+          padding-right: 48px;
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+  &__switch-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,133 @@
+.st-tag {
+  display: inline-block;
+  .fz(12px);
+  border-radius: 2px;
+  .c(@white);
+
+  &--coach-personal,
+  &--coach-team,
+  &--role-staff,
+  &--period-card,
+  &--number-card,
+  &--deposit-card,
+  &--role-saler,
+  &--cabinet-available,
+  &--cabinet-inuse {
+    .pd-lr(8px);
+    .lh(22px);
+  }
+
+  &--coach-personal {
+    .bg(#a88add);
+  }
+
+  &--coach-team {
+    .bg(#fd9f45);
+  }
+
+  &--role-saler {
+    .bg(#fd6445);
+  }
+
+  &--role-staff {
+    .bg(@link-color);
+  }
+
+  &--period-card {
+    .bg(#e6f7ff);
+    .c(@primary-color);
+  }
+  &--number-card {
+    .bg(#e2fbff);
+    .c(#29b1c5);
+  }
+  &--deposit-card {
+    .bg(#dffff5);
+    .c(#3dc199);
+  }
+  &--cabinet-available {
+    .bg(rgba(@success-color, 0.15));
+    .c(@success-color);
+  }
+  &--cabinet-inuse {
+    .bg(rgba(@warning-color, 0.15));
+    .c(@warning-color);
+  }
+
+  &--shop-opening,
+  &--shop-trial,
+  &--shop-presale,
+  &--shop-holiday,
+  &--shop-stop,
+  &--shop-sign,
+  &--shop-close {
+    width: 56px;
+    height: 22px;
+    .lh(22px);
+    .ta-c;
+    border-radius: 4px 0px 16px 0px;
+    .c(#fff);
+  }
+
+  &--shop-opening {
+    background: rgba(63, 102, 246, 1);
+  }
+
+  &--shop-sign {
+    .bg(@error-color);
+  }
+
+  &--shop-presale {
+    .bg(rgba(255, 144, 49, 0.7));
+  }
+
+  &--shop-trial {
+    background: rgba(21, 192, 158, 0.8);
+  }
+
+  &--shop-close {
+    background: @error-color;
+  }
+
+  &--shop-stop {
+    background: rgba(255, 144, 49, 0.8);
+  }
+
+  &--shop-holiday {
+    background: rgba(181, 65, 255, 1);
+  }
+
+  &--reception-period-card,
+  &--reception-number-card,
+  &--reception-deposit-card {
+    .bg(#3f66f6);
+  }
+
+  &--reception-visit-appointment,
+  &--reception-site-appointment {
+    .bg(#261e6e);
+  }
+  &--reception-personal-course {
+    .bg(#a764ff);
+  }
+
+  &--reception-personal-team-course,
+  &--reception-team-course,
+  &--reception-small-course {
+    .bg(#ff8f41);
+  }
+  &--reception-period-card,
+  &--reception-number-card,
+  &--reception-deposit-card,
+  &--reception-visit-appointment,
+  &--reception-site-appointment,
+  &--reception-personal-course,
+  &--reception-personal-team-course,
+  &--reception-team-course,
+  &--reception-small-course {
+    display: block;
+    .pd-lr(8px);
+    .h(20px);
+    .lh(20px);
+  }
+}

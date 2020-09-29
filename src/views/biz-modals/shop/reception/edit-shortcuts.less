@@ -1,0 +1,59 @@
+.edit-shortcuts {
+  .pd(16px 24px);
+  .content {
+    display: flex;
+    .section {
+      flex: 1;
+      .label {
+        .mg-b(8px);
+      }
+    }
+    .section:nth-of-type(1) {
+      .mg-r(12px);
+    }
+  }
+  .shortcuts {
+    .h(130px);
+    &.show {
+      .shortcut {
+        .bg(#f7f9fc);
+        border: 1px solid rgba(205, 212, 223, 1);
+      }
+    }
+    &.hidden {
+      .shortcut {
+        .bg(@white);
+        border: 1px solid rgba(205, 212, 223, 1);
+      }
+    }
+    .shortcut {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: move;
+      .h(24px);
+      .bd-r(4px);
+      .pd-lr(8px, 6px);
+      .mg-r(8px);
+      .mg-b(8px);
+      .lh(22px);
+      box-sizing: border-box;
+      user-select: none;
+      &.hidden {
+        display: none;
+        .mg(0);
+      }
+      &.dragged {
+        border-style: dashed;
+      }
+      .name {
+        .fz(12px);
+        .c(@text);
+      }
+      .icon {
+        .c(#9bacb9);
+        .mg-l(4px);
+        .fz(10px);
+      }
+    }
+  }
+}

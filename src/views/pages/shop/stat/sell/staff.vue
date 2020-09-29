@@ -1,0 +1,231 @@
+<template>
+  <div :class="b()">
+    <div :class="b('section')">
+      <header :class="bHeader('header')">
+        <div :class="bHeader('button-wapper')">
+          <st-button
+            type="primary"
+            v-if="auth.export"
+            v-export-excel="{
+              type: 'sales/shop/export',
+              query: $searchQuery
+            }"
+          >
+            全部导出
+          </st-button>
+        </div>
+        <div :class="bHeader('actions')">
+          <st-select
+            :options="contractType"
+            :defaultLabel="'全部合同类型'"
+            v-model="$searchQuery.contract_type"
+            @change="onSingleSearch('contract_type', $event)"
+          ></st-select>
+          <a-cascader
+            :allowClear="false"
+            style="width: 120px"
+            placeholder="请选择部门"
+            :options="departmentList"
+            change-on-select
+            v-model="departmentId"
+            @change="onCascaderChange"
+          />
+          <st-select
+            show-search
+            :options="staffList"
+            :defaultLabel="'全部员工'"
+            v-model="$searchQuery.staff_id"
+            :query="{
+              department_id: this.$searchQuery.section_id
+            }"
+            option-filter-prop="children"
+            :filter-option="true"
+            @change="onSingleSearch('staff_id', $event)"
+            @refresh="onStaffSelectRefresh"
+          ></st-select>
+          <st-recent-radio-group
+            @change="onChangeDataDays"
+            :value="$searchQuery"
+          ></st-recent-radio-group>
+          <st-refresh-btn
+            :updateTime="updateTime"
+            :action="refresh"
+          ></st-refresh-btn>
+        </div>
+      </header>
+      <st-total
+        :class="b('total')"
+        :indexs="totalColumns"
+        :dataSource="total"
+        hasTitle
+      ></st-total>
+      <st-table
+        :loading="loading.getList"
+        :columns="columns"
+        class="mg-t16"
+        :class="!list.length && b('table-nodata')"
+        rowKey="staff_id"
+        :expandedRowKeys="expendKeys"
+        :page="page"
+        @change="onTableChange"
+        @expand="expandChange"
+        :dataSource="list"
+        :stripe="false"
+      >
+        <div slot="expandedRowRender" slot-scope="record">
+          <st-table
+            :columns="childColumns"
+            :rowKey="(record, idx) => idx"
+            :query="{ staff_id: record.staff_id }"
+            :page="childListMap[record.staff_id].page"
+            :pagination="{ simple: true, hideOnSinglePage: true }"
+            :dataSource="childListMap[record.staff_id].list"
+            :loading="
+              activeTableKey === record.staff_id && loading.getDetailList
+            "
+            @change="onChildTableChange"
+            :stripe="false"
+          >
+            <span slot="pay_date" slot-scope="text">
+              {{ moment(text).format('YYYY-MM-DD') }}
+            </span>
+          </st-table>
+        </div>
+      </st-table>
+    </div>
+  </div>
+</template>
+
+<script>
+import StTotal from '@/views/components/total#/total.vue'
+
+import { StaffService } from './staff.service'
+import tableMixin from '@/mixins/table.mixin'
+import {
+  columns,
+  totalColumns,
+  childColumns,
+  contractTypes
+} from './staff.config'
+import moment from 'moment'
+
+export default {
+  name: 'ShopStatSaleStaff',
+  mixins: [tableMixin],
+  serviceInject() {
+    return {
+      staffService: StaffService
+    }
+  },
+  rxState() {
+    const {
+      list$,
+      childListMap$,
+      expendKeys$,
+      page$,
+      total$,
+      auth$,
+      departmentList$,
+      staffList$,
+      contractType$,
+      updateTime$,
+      loading$
+    } = this.staffService
+    return {
+      list: list$,
+      childListMap: childListMap$,
+      expendKeys: expendKeys$,
+      page: page$,
+      total: total$,
+      auth: auth$,
+      departmentList: departmentList$,
+      staffList: staffList$,
+      contractType: contractType$,
+      updateTime: updateTime$,
+      loading: loading$
+    }
+  },
+  created() {
+    this.staffService.getDepartmentList().subscribe()
+    this.staffService
+      .getStaffList({
+        department_id: this.$searchQuery.section_id
+      })
+      .subscribe()
+  },
+  bem: {
+    b: 'page-shop-stat-staff',
+    bHeader: 'page-shop-stat-header'
+  },
+  data() {
+    return {
+      chartTodayShop: -1,
+      departmentId: [-1],
+      activeTableKey: null
+    }
+  },
+  computed: {
+    columns,
+    childColumns,
+    totalColumns
+  },
+
+  methods: {
+    moment,
+    onCascaderChange(val) {
+      this.$searchQuery.section_id = val.length ? val[val.length - 1] : [-1]
+      this.onSearch()
+    },
+    onChangeDataDays(event) {
+      this.$searchQuery.day = event.recently_day || undefined
+      this.$searchQuery.start_date = event.start_date || undefined
+      this.$searchQuery.end_date = event.end_date || undefined
+      this.onSearch()
+    },
+    refresh() {
+      return this.staffService.getDataRefresh()
+    },
+    onStaffSelectRefresh(query) {
+      this.staffService.getStaffList(query).subscribe()
+    },
+    onChildTableChange(pagination, ...ret) {
+      this.onChildrenTableChange(pagination, ...ret).then(query => {
+        console.log('子列表页面切换 请求参数', {
+          ...this.finalSearchQuery,
+          ...query
+        })
+        this.activeTableKey = query.staff_id
+        this.staffService
+          .getDetailList({
+            ...this.finalSearchQuery,
+            ...query
+          })
+          .subscribe()
+      })
+    },
+    expandChange(isExpend, record) {
+      if (isExpend) {
+        this.staffService.ADD_EXPENDKEY(record.staff_id.toString())
+        this.activeTableKey = record.staff_id
+        this.staffService
+          .getDetailList({
+            ...this.finalSearchQuery,
+            staff_id: record.staff_id,
+            current_page: 1,
+            size: 10
+          })
+          .subscribe()
+      } else {
+        this.staffService.DEL_EXPENDKEY(record.staff_id.toString())
+        this.staffService.RESET_CHILDITEM(record.staff_id.toString())
+      }
+      // !isExpend
+      //   ? this.staffService.DEL_EXPENDKEY(record.staff_id.toString())
+      //   : this.staffService.ADD_EXPENDKEY(record.staff_id.toString())
+    }
+  },
+  components: {
+    StTotal
+  }
+}
+</script>

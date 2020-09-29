@@ -1,0 +1,50 @@
+.st-recent-radio-group {
+  display: inline-block;
+  .ant-radio-button-wrapper {
+    color: @text-light;
+    border: 1px solid @border-color;
+    font-weight: 400;
+    border-right: 0;
+    padding: 0 8px;
+  }
+  .ant-radio-button-wrapper-checked {
+    border: 1px solid @border-color;
+    background: @bg-gray;
+    font-weight: 500;
+    color: @title;
+    box-shadow: none;
+    border-right: 0;
+  }
+  .ant-radio-button-wrapper:last-child {
+    border-radius: 0;
+  }
+  &__range {
+    vertical-align: bottom;
+    .w(235px);
+    &.active .ant-input {
+      background: @bg-gray;
+      color: @title;
+      border-color: @border-color !important;
+      box-shadow: none !important;
+      input {
+        width: 91px;
+        font-weight: 500;
+      }
+    }
+    .ant-input {
+      border-radius: 0 4px 4px 0;
+      .ant-calendar-range-picker-input {
+        width: 91px;
+        text-align: center;
+      }
+    }
+    .ant-calendar-range-picker-separator {
+      margin-right: 0;
+    }
+    .ant-calendar-picker:focus
+      .ant-calendar-picker-input:not(.ant-input-disabled) {
+      border-color: @border-color;
+      box-shadow: none;
+    }
+  }
+}

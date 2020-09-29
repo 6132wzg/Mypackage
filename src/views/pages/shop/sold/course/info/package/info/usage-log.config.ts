@@ -1,0 +1,34 @@
+import { shop_columns } from './../../../../../../brand/product/card/deposit/info.config'
+export const columns = () => [
+  {
+    title: '使用时间',
+    dataIndex: 'usage_time'
+  },
+  {
+    title: '使用门店',
+    dataIndex: 'shop_name',
+    scopedSlots: { customRender: 'shop_name' }
+  },
+  {
+    title: '使用详情',
+    dataIndex: 'usage_detail',
+    scopedSlots: { customRender: 'usage_detail' }
+  },
+  {
+    title: '变更额度(节)',
+    dataIndex: 'amount_change',
+    scopedSlots: { customRender: 'amount_change' }
+  },
+  {
+    title: '剩余额度(节)',
+    dataIndex: 'remain_amount'
+  },
+  {
+    title: '操作来源',
+    dataIndex: 'operate_source_name'
+  },
+  {
+    title: '操作人',
+    dataIndex: 'operator_name'
+  }
+]

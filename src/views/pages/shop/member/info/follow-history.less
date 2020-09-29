@@ -1,0 +1,52 @@
+.member-follow-history {
+  &-timeline__item {
+    border: 1px solid @divider;
+  }
+
+  &-timeline__item__title {
+    background: @bg-gray;
+    padding: 12px;
+  }
+
+  &-timeline__item__info {
+    padding-left: 12px;
+    height: 54px;
+    line-height: 54px;
+  }
+
+  .ant-timeline-item-pending {
+    display: none;
+  }
+
+  .ant-timeline-item {
+    position: relative;
+  }
+
+  .ant-timeline {
+    padding-left: 100px;
+    height: 620px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .time-position {
+    position: absolute;
+    left: -118px;
+    top: 10px;
+    text-align: right;
+    &-grey {
+      color: @text-light;
+    }
+  }
+
+  .ant-timeline-item-head {
+    top: 10px;
+    background-color: @primary-color;
+    border: 2px solid #fff;
+  }
+  .ant-timeline.ant-timeline-pending
+    .ant-timeline-item-last
+    .ant-timeline-item-tail {
+    border-left: 2px solid #e8e8e8;
+  }
+}

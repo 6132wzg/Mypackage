@@ -1,0 +1,242 @@
+.time-table {
+  width: 380px;
+  &__content {
+    height: 438px;
+    position: relative;
+    &-bg {
+      height: 100%;
+      .bg-img {
+        width: 100%;
+        position: relative;
+        height: 214px;
+        .default-bg {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            129deg,
+            rgba(255, 72, 72, 0.75) 0%,
+            rgba(223, 30, 82, 0.75) 100%
+          );
+        }
+        .bg-url {
+          width: 100%;
+        }
+        .radian-img {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+        }
+      }
+      .bg-footer {
+        height: calc(100% - 214px);
+        background: linear-gradient(
+          129deg,
+          rgba(23, 23, 73, 1) 0%,
+          rgba(23, 23, 73, 1) 100%
+        );
+      }
+    }
+    &-info {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      .pd(16px 8px);
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    .shop-logo {
+      width: 35px;
+      height: 35px;
+      .bg(@white);
+    }
+    .shop-info {
+      text-align: right;
+      color: @white;
+    }
+    .shop-name {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+    .table-time {
+      font-size: 12px;
+    }
+  }
+  &__table {
+    padding-top: 13px;
+    position: relative;
+    &-title {
+      width: 194px;
+      height: 26px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      border-radius: 26px;
+      text-align: center;
+      line-height: 26px;
+      color: @white;
+      font-size: 14px;
+      background: linear-gradient(
+        270deg,
+        rgba(255, 72, 72, 1) 0%,
+        rgba(253, 132, 48, 1) 100%
+      );
+      z-index: 1;
+    }
+    &-content {
+      width: 100%;
+      height: 290px;
+      border-radius: 8px;
+      .bg(@white);
+      padding: 24px 10px 0;
+      position: relative;
+      .table-block {
+        width: 42px;
+        height: 46px;
+        position: absolute;
+        font-size: 12px;
+        .course-title {
+          width: 82px;
+          height: 12px;
+          transform: scale(0.42);
+          -webkit-transform: scale(0.42);
+          transform-origin: left;
+          -webkit-transform-origin: left;
+        }
+        .coach-name {
+          transform: scale(0.42);
+          -webkit-transform: scale(0.42);
+          transform-origin: left;
+          -webkit-transform-origin: left;
+        }
+        .site-name {
+          width: 238%;
+          height: 18px;
+          line-height: 18px;
+          position: absolute;
+          bottom: -7px;
+          left: -5px;
+          transform: scale(0.42);
+          -webkit-transform: scale(0.42);
+          transform-origin: left;
+          -webkit-transform-origin: left;
+          color: @white;
+          background-color: #ff4848;
+          padding-left: 10px;
+        }
+        .level-star {
+          height: 10px;
+        }
+        &__1 {
+          left: 60px;
+          top: 42px;
+        }
+        &__2 {
+          left: 60px;
+          top: 88px;
+        }
+        &__3 {
+          left: 102px;
+          top: 88px;
+          .site-name {
+            background-color: #15155b;
+          }
+        }
+        &__4 {
+          left: 231px;
+          top: 88px;
+        }
+        &__5 {
+          left: 316px;
+          top: 42px;
+        }
+        &__6 {
+          left: 144px;
+          top: 133px;
+        }
+        &__7 {
+          left: 274px;
+          top: 133px;
+          .site-name {
+            background-color: #15155b;
+          }
+        }
+        &__8 {
+          left: 102px;
+          top: 180px;
+          .site-name {
+            background-color: #15155b;
+          }
+        }
+        &__9 {
+          left: 231px;
+          top: 180px;
+        }
+        &__10 {
+          left: 316px;
+          top: 180px;
+        }
+        &__11 {
+          left: 102px;
+          top: 226px;
+          .site-name {
+            background-color: #15155b;
+          }
+        }
+        &__12 {
+          left: 188px;
+          top: 226px;
+          .site-name {
+            background-color: #15155b;
+          }
+        }
+      }
+    }
+    &-footer {
+      padding: 0 10px;
+      display: flex;
+      .qrcode {
+        width: 48px;
+        height: 48px;
+        .bg(@white);
+      }
+      .message {
+        color: @white;
+        flex: 1;
+        &-title {
+          height: 30px;
+          font-size: 12px;
+          font-weight: 500px;
+          transform: scale(0.8);
+          -webkit-transform: scale(0.8);
+          transform-origin: left top;
+          -webkit-transform-origin: left top;
+        }
+        &-info {
+          &-text {
+            display: inline-block;
+            font-size: 12px;
+            transform: scale(0.6);
+            -webkit-transform: scale(0.6);
+            transform-origin: left top;
+            -webkit-transform-origin: left top;
+            position: relative;
+            top: -24px;
+            width: 170%;
+            white-space: pre-line;
+          }
+        }
+      }
+    }
+  }
+}

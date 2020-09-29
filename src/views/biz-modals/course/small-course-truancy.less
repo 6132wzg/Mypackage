@@ -1,0 +1,53 @@
+.modal-course-group-class {
+  width: 100%;
+  display: flex;
+  padding-bottom: 24px;
+  .ant-spin-container {
+    display: flex;
+  }
+  &__left {
+    display: inline-block;
+    width: 50%;
+  }
+  &__right {
+    display: inline-block;
+    width: 50%;
+  }
+  &__item {
+    height: 54px;
+    line-height: 54px;
+    padding-left: 24px;
+    background: @table-bg-color-thead-second;
+    border-radius: 3px 3px 0px 0px;
+  }
+  &__wrap {
+    height: 74px;
+    padding: 12px;
+    &:nth-child(odd) {
+      background: @table-bg-color-thead-second;
+    }
+  }
+  &__title {
+    color: @title;
+    font-weight: 500;
+    display: block;
+  }
+  &__label {
+    height: 17px;
+    font-size: 12px;
+    color: #a9b7c2;
+  }
+  &__value {
+    height: 17px;
+    font-size: 12px;
+    color: @text;
+  }
+  .coach {
+    display: inline-block;
+    width: 80px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,59 @@
+.h5-form-service-component {
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgba(37, 42, 46, 1);
+  }
+  &__desc {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 20px;
+    color: @text-light;
+  }
+  &__list {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__box-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__box {
+    position: relative;
+    z-index: 9;
+    border: 1px solid @divider;
+    .mg-b(17px);
+    .mg-r(18px);
+    width: 102px;
+    background: rgba(247, 249, 252, 1);
+    border-radius: 0px 0px 1px 1px;
+    border-bottom: 1px solid @divider;
+    background: @index-reserve-title-bg;
+    &__icon {
+      height: 98px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box__img {
+      height: 56px;
+      width: 56px;
+    }
+  }
+  &__checked {
+    position: absolute;
+    z-index: 19;
+    right: 5px;
+    top: 1px;
+  }
+  &__name {
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    color: #3e4d5c;
+    font-size: 14px;
+    background: #fff;
+  }
+}

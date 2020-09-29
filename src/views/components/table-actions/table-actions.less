@@ -1,0 +1,40 @@
+.st-table-actions {
+  white-space: nowrap;
+  &--use-max {
+    min-width: 116px;
+  }
+  &__trigger {
+    padding-left: 2px;
+    .c(rgba(@black, 0.15));
+    &:hover {
+      .c(rgba(@black, 0.45));
+    }
+  }
+  &__empty {
+    font-size: 14px;
+    color: @primary-color;
+    line-height: 22px;
+  }
+  &__popover {
+    z-index: 998;
+    .ant-popover-arrow {
+      display: none;
+    }
+    .ant-popover-inner-content {
+      margin-top: -10px;
+      padding: 4px 0;
+      min-width: 136px;
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 4px 24px;
+        color: @text;
+        font-size: 14px;
+        line-height: 22px;
+        &:hover {
+          .bg(#e6f7ff);
+        }
+      }
+    }
+  }
+}

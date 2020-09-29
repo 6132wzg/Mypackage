@@ -1,0 +1,36 @@
+.brand-plagin-member-points-member-points {
+  position: relative;
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(247, 249, 252, 1);
+    border: 1px solid rgba(247, 249, 252, 1);
+    padding: 16px 64px;
+    &-item {
+      .label {
+        font-size: 14px;
+        color: rgba(117, 139, 163, 1);
+        line-height: 22px;
+      }
+      .value {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(37, 42, 46, 1);
+        line-height: 26px;
+        font-family: DINAlternate-Bold, bebas;
+      }
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .st-table .ant-table .ant-table-thead > tr > th .ant-table-column-sorters {
+    display: flex;
+    align-items: center;
+    .ant-table-column-sorter {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin-top: 0;
+    }
+  }
+}

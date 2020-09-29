@@ -1,0 +1,90 @@
+.modal-sold-deal-gathering {
+  &__info {
+    border-bottom: 1px solid @divider;
+  }
+  &__gathering {
+    padding: 18px 0 0;
+    .total {
+      .fz(20px);
+      .lh(32px);
+    }
+  }
+  .ant-modal-body {
+    padding-bottom: 0;
+    .st-modal__body {
+      .pd(24px 0 0 0);
+    }
+  }
+  .ant-modal-footer {
+    padding: 24px;
+  }
+}
+.modal-sold-deal-gathering-order-content {
+  .pd(24px 24px 22px 24px);
+  .bg(#f7f9fc);
+  transition: height 0.2s ease-out;
+  box-sizing: border-box;
+  &.contentFold {
+    height: 54px;
+    .pd(16px 24px 16px 24px);
+    overflow: hidden;
+    .modal-sold-deal-gathering-order-content__info:nth-of-type(1) {
+      .modal-sold-deal-gathering-order-content__info-item {
+        .mg-b(16px);
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    .mg-b(24px);
+    &-item {
+      width: calc(33.333% - 16px);
+      .mg-b(8px);
+      .mg-r(24px);
+      font-size: 14px;
+      color: rgba(62, 77, 92, 1);
+      line-height: 22px;
+      display: flex;
+      &-label {
+        font-size: 14px;
+        color: rgba(37, 42, 46, 1);
+        line-height: 22px;
+        min-width: 40px;
+      }
+      &-value {
+        flex: 1;
+        word-break: break-all;
+      }
+    }
+    &-item:nth-of-type(3n) {
+      .mg-r(0);
+    }
+  }
+  &__info:nth-last-of-type(1) {
+    .mg-b(0);
+  }
+}
+.modal-sold-deal-gathering-payment {
+  .pd-lr(24px);
+}
+.modal-sold-deal-gathering-footer {
+  display: flex;
+  justify-content: flex-end;
+  &__error-tip {
+    font-size: 12px;
+    color: rgba(255, 94, 65, 1);
+    line-height: 32px;
+    .mg-r(8px);
+  }
+}
+.modal-sold-deal-gathering-fold {
+  display: flex;
+  justify-content: flex-end;
+  height: 22px;
+  font-size: 14px;
+  color: rgba(37, 42, 46, 1);
+  line-height: 22px;
+  .mg-t(8px);
+  .pd-lr(24px);
+}

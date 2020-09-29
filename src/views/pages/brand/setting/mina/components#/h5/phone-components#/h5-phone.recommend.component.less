@@ -1,0 +1,65 @@
+@import './active.less';
+.h5-phone-recommend-component-1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .active();
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    &-title {
+      font-size: 36px;
+      font-weight: 500;
+      color: rgba(34, 34, 34, 1);
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: rgba(153, 153, 153, 1);
+    }
+  }
+
+  &__list {
+    width: 750px;
+    padding-left: 40px !important;
+    margin-top: 24px;
+  }
+  &__slide {
+    width: 300px !important;
+  }
+}
+
+.h5-phone-recommend-component-2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .active();
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    &-title {
+      font-size: 36px;
+      font-weight: 500;
+      color: rgba(34, 34, 34, 1);
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: rgba(153, 153, 153, 1);
+    }
+  }
+  &__list {
+    padding: 16px 40px 0;
+  }
+  &__item {
+    padding-top: 16px;
+    &:not(:last-child) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(239, 239, 239, 1);
+    }
+  }
+}

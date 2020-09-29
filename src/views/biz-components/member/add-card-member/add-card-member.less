@@ -1,0 +1,32 @@
+.page-add-card-member {
+  &__search-wrapper {
+    padding: 8px 0 !important;
+    position: relative;
+  }
+
+  &__search-list {
+    max-height: 200px;
+    overflow: auto;
+    margin: 0 -12px;
+  }
+  &__search-text {
+    line-height: 36px;
+    cursor: pointer;
+    padding-left: 12px;
+    &:hover {
+      background: @secondary-color;
+    }
+  }
+  &__search-tip {
+    color: @text-light;
+  }
+  .global-highlight-color {
+    .c(@link-color);
+  }
+}
+.change-member-popover {
+  padding-top: 5px;
+}
+.change-member-popover .ant-popover-arrow {
+  display: none;
+}

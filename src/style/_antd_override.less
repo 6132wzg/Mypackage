@@ -1,0 +1,188 @@
+// 分页样式覆盖
+.ant-pagination-item {
+  &-active {
+    .bg(@primary-color);
+
+    a {
+      .c(@white);
+    }
+
+    &:hover a,
+    &:focus a {
+      .c(@white);
+    }
+  }
+
+  &:focus {
+    border-color: @normal-color;
+  }
+}
+
+.ant-modal-mask {
+  .bg(rgba(@black, 0.5));
+}
+.ant-modal {
+  .ant-modal-title {
+    .lh(24px);
+  }
+
+  .ant-modal-close {
+    .c(@text-light);
+
+    &:focus,
+    &:hover {
+      .c(#444);
+    }
+  }
+
+  .ant-modal-close-x {
+    .w(42px);
+    .fz(10px);
+  }
+
+  .ant-modal-footer {
+    border-top: none;
+  }
+}
+.ant-select-dropdown-menu-item {
+  .pd(8px 12px);
+}
+
+.ant-input::placeholder,
+.ant-input-number-input::placeholder,
+.ant-select-search__field__placeholder,
+.ant-select-selection__placeholder,
+.ant-calendar-range-picker-input::placeholder {
+  color: @text-light;
+  font-size: 14px;
+}
+// 密码框placeholder样式覆盖
+input[type='password']::placeholder {
+  font-size: 14px;
+}
+
+// '›'.chartCodeAt().toString(16)
+.ant-calendar-header .ant-calendar-prev-century-btn:after,
+.ant-calendar-header .ant-calendar-prev-decade-btn:after,
+.ant-calendar-header .ant-calendar-prev-year-btn:after {
+  // «
+  content: '\ab';
+}
+.ant-calendar-header .ant-calendar-prev-month-btn:after {
+  // ‹
+  content: '\2039';
+}
+.ant-calendar-header .ant-calendar-next-month-btn:after {
+  // ›
+  content: '\203a';
+}
+.ant-calendar-header .ant-calendar-next-century-btn:after,
+.ant-calendar-header .ant-calendar-next-decade-btn:after,
+.ant-calendar-header .ant-calendar-next-year-btn:after {
+  // »
+  content: '\bb';
+}
+
+.ant-spin-dot i {
+  background-color: @text-light;
+}
+
+// 确认框样式修正
+.ant-modal-confirm {
+  top: 50%;
+  .ant-modal-body {
+    padding: 24px;
+  }
+  .ant-modal-content {
+    transform: translateY(-50%);
+  }
+}
+
+// switch按钮样式覆盖
+.ant-radio-group {
+  .ant-radio-button-wrapper {
+    color: @text-light;
+    font-weight: 400;
+  }
+  .ant-radio-button-wrapper-checked {
+    background: @bg-gray;
+    border-color: @border-color;
+    color: @title;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  }
+}
+// 按钮禁用样式
+.ant-btn-primary[disabled] {
+  background: @border-color;
+  color: #fff;
+  &:hover,
+  &:active {
+    background: @border-color;
+    color: #fff;
+  }
+}
+
+.ant-btn-dashed[disabled] {
+  .bg(@bg-gray);
+  .c(@text-light);
+  border-color: @border-color;
+  &:hover,
+  &:active {
+    .bg(@bg-gray);
+    .c(@text-light);
+    border-color: @border-color;
+  }
+}
+
+//form表单错误提示
+.ant-form-explain {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.Win-specific {
+  .ant-table-thead > tr > th {
+    font-weight: bolder;
+  }
+}
+
+.ant-calendar-range-picker-input {
+  text-align: left;
+}
+.ant-calendar-range-picker-separator {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+// 步骤条
+.ant-steps-item-process {
+  .ant-steps-item-icon {
+    background: @success-color;
+    border-color: @success-color;
+  }
+}
+
+.ant-steps-item-finish {
+  > .ant-steps-item-content > .ant-steps-item-title::after {
+    background-color: @success-color;
+  }
+  .ant-steps-item-icon {
+    border-color: @success-color;
+    > .ant-steps-icon {
+      color: @success-color;
+    }
+  }
+}
+.ant-input-disabled {
+  .bg(#f7f9fc);
+}
+.ant-input-group-addon {
+  .bg(#f7f9fc);
+}
+@media (max-width: 575px) {
+  .ant-form-item-label {
+    text-align: right;
+  }
+}

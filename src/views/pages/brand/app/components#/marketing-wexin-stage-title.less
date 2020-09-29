@@ -1,0 +1,52 @@
+.marketing-wexin-stage-title {
+  .pd(24px);
+  .bg(#fff);
+  display: flex;
+  justify-content: space-between;
+  .mg-b(12px);
+  &__left {
+    &-top {
+      .mg-b(32px);
+      .title {
+        .fz(18px);
+        font-weight: 500;
+        .c(@title);
+        .lh(26px);
+        .mg-b(8px);
+        .tip {
+          .fz(14px);
+          font-weight: normal;
+          .c(#3f66f6);
+          .mg-l(8px);
+        }
+      }
+      .content {
+        .fz(14px);
+        .lh(22px);
+        .c(#9bacb9);
+      }
+    }
+    &-bottom {
+      .label {
+        .fz(16px);
+        .lh(28px);
+        .c(#5e6a7f);
+      }
+      .content {
+        .fz(16px);
+        .lh(28px);
+        .c(#5e6a7f);
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    .imgBox {
+      .s(80px, 142px);
+      .mg-r(24px);
+    }
+    .imgBox:nth-last-of-type(1) {
+      .mg-r(0);
+    }
+  }
+}

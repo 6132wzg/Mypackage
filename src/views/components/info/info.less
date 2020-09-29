@@ -1,0 +1,27 @@
+.st-info {
+}
+
+.st-info-item {
+  display: flex;
+  .mg-b(16px);
+  &__label {
+    height: 22px;
+    font-size: 14px;
+    color: rgba(@title);
+    line-height: 22px;
+    text-align: right;
+  }
+  &__label--light {
+    .c(@text-light);
+  }
+  &__content {
+    flex: 1;
+    word-break: break-all;
+    .lh(22px);
+    .pd-l(24px);
+    .c(@text);
+  }
+}
+.container-basis .st-hr {
+  margin-top: 16px !important;
+}

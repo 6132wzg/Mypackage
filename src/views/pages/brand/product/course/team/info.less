@@ -1,0 +1,48 @@
+.page-team-info {
+  background: #f0f2f5;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    &__right {
+      .image {
+        .s(280px, 158px);
+      }
+    }
+    &__left {
+      width: 73%;
+    }
+    &__tip {
+      display: flex;
+      align-items: center;
+      .item {
+        flex: 1;
+        .label {
+          font-size: 14px;
+          font-weight: 400;
+          color: @title;
+          line-height: 22px;
+        }
+      }
+      .item:last-child {
+        min-width: 235px;
+      }
+    }
+    &__description {
+      min-height: 48px;
+      font-size: 14px;
+      font-weight: 400;
+      color: @text;
+      line-height: 22px;
+    }
+    &__train-aim {
+      font-size: 12px;
+      font-weight: 400;
+      color: @text-light;
+      line-height: 20px;
+    }
+  }
+  .header {
+    background: #fff;
+    padding: 24px 32px;
+  }
+}

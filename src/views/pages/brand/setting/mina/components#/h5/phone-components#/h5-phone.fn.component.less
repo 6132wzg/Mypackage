@@ -1,0 +1,80 @@
+@import './active.less';
+.h5-phone-fn-component {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  .active();
+  &--2 {
+    padding-left: 46px;
+    padding-right: 46px;
+    .h5-phone-fn-component {
+      &__item {
+        width: 328px;
+        min-height: 96px;
+        flex-direction: row;
+        &-title {
+          margin-top: inherit;
+          margin-left: 4px;
+          font-size: 28px;
+          color: rgba(102, 102, 102, 1);
+          width: 140px;
+        }
+      }
+    }
+  }
+  &--3 {
+    padding-left: 80px;
+    padding-right: 80px;
+    .h5-phone-fn-component {
+      &__item {
+        &:not(:nth-child(3n)) {
+          margin-right: 115px;
+        }
+      }
+    }
+  }
+  &--4 {
+    padding-left: 50px;
+    padding-right: 50px;
+    .h5-phone-fn-component {
+      &__item {
+        &:not(:nth-child(4n)) {
+          margin-right: 56px;
+        }
+      }
+    }
+  }
+  &--5 {
+    padding-left: 30px;
+    padding-right: 30px;
+    .h5-phone-fn-component {
+      &__item {
+        &:not(:nth-child(5n)) {
+          margin-right: 22px;
+        }
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    min-height: 140px;
+    margin-top: 24px;
+    &-title {
+      margin-top: 8px;
+      font-size: 24px;
+      color: rgba(102, 102, 102, 1);
+    }
+  }
+  &__no-data {
+    width: 100%;
+    padding: 40px 0;
+  }
+  &__title {
+    font-size: 36px;
+    font-weight: 500;
+    color: @index-phone-title;
+  }
+}

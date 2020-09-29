@@ -1,0 +1,31 @@
+.page-brand-stat {
+}
+.page-brand-stat-header {
+  &__title {
+    font-weight: 500;
+    color: @title;
+    line-height: 32px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__button-wapper {
+    margin-right: 8px;
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    & > * {
+      margin-right: 8px;
+      margin-bottom: 16px;
+      flex: 1 1 auto;
+      &:last-child {
+        margin-right: 0;
+        flex: 0 0 auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.st-block-title {
+  position: relative;
+  &__content {
+    .mg(0 24px);
+    .pd(8px 0);
+    border-bottom: 1px solid @divider;
+    font-size: 16px;
+    color: @title;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  &:before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    background: @primary-color;
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+}

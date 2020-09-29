@@ -1,0 +1,153 @@
+.st-table {
+  .ant-table-body {
+    width: 100%;
+    overflow-x: scroll;
+    .ant-table-expanded-row .ant-table-body {
+      width: auto;
+      overflow: auto;
+    }
+  }
+  .st-expand-row-icon {
+    .c(@text-light);
+  }
+
+  .ant-table-row-level-0 + .ant-table-row-level-1 {
+    box-shadow: inset 0px 12px 12px -12px #e1e1e1;
+  }
+  .ant-table-thead {
+    .bg(#f2f4f7);
+  }
+  // 表格默认为斑纹样式
+  tr[class*='even'] {
+    background: #fafafa;
+  }
+  // 斑纹样式下 表头底部无边框
+  .ant-table-thead > tr > th {
+    .bg(@table-bg-color-thead-second);
+    .c(#7f8da6);
+    .pd(12px 8px);
+    white-space: nowrap;
+    word-break: keep-all;
+    .ant-table-column-sorter {
+      top: 47%;
+    }
+    &:first-child {
+      padding-left: 16px;
+    }
+    &:last-child {
+      padding-right: 16px;
+    }
+  }
+
+  // 非斑纹样式下 表头底部有边框
+  &-normal {
+    .ant-table-thead > tr > th {
+      border-bottom: 1px solid @divider;
+    }
+  }
+  // 非斑纹样式下 表格有边框
+  .ant-table-tbody > tr > td {
+    border-bottom: 1px solid @divider;
+    padding: 8px;
+    &:first-child {
+      padding-left: 16px;
+    }
+    &:last-child {
+      padding-right: 16px;
+    }
+  }
+  // 表格行合并时左右边框样式
+  .ant-table-tbody > tr > td[rowspan] {
+    border-left: 1px solid @divider;
+    border-right: 1px solid @divider;
+  }
+  .ant-table-tbody > tr > td:first-child[rowspan] {
+    & + td {
+      padding-left: 16px;
+    }
+    border-left: none;
+  }
+  .ant-table-tbody > tr > td:last-child[rowspan] {
+    border-right: none;
+  }
+  // 斑纹样式下 表格无边框
+  .ant-table-tbody {
+    & > tr[class*='even'],
+    & > tr[class*='odd'] {
+      & > td {
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+      }
+    }
+  }
+  .ant-table-pagination.ant-pagination {
+    margin: 12px 0;
+  }
+  .ant-table-placeholder {
+    border-bottom: none;
+  }
+  .ant-table-row-expanded:after,
+  .ant-table-row-collapsed:after {
+    .c(#9bacb9);
+  }
+  .ant-table-row-expanded:hover:after,
+  .ant-table-row-collapsed:hover:after {
+    color: #3f66f6;
+  }
+
+  .ant-table-tbody tr.ant-table-expanded-row td {
+    padding: 0;
+    .bg(#fff);
+    .ant-table {
+      margin-bottom: -1px;
+    }
+    .st-table-nodata .ant-table {
+      margin-bottom: 0;
+    }
+    .ant-pagination-simple.ant-table-pagination {
+      margin: 8px 0 6px;
+    }
+    .ant-table-wrapper {
+      margin: 0;
+      border-left: 1px solid #3f66f6;
+      td {
+        padding: 8px;
+      }
+      .ant-table-thead > tr > th {
+        background: inherit;
+        .pd(8px);
+      }
+      .ant-table-thead {
+        tr {
+          border-bottom: 1px solid @divider;
+        }
+      }
+      .ant-table-tbody {
+        tr {
+          border-bottom: 1px solid @divider;
+          background: #fff;
+          // &:last-child {
+          //   border-bottom: none;
+          // }
+        }
+      }
+    }
+  }
+}
+.st-table-alert {
+  border: 0;
+  background-color: rgba(255, 161, 0, 0.05);
+  .ant-alert-icon {
+    .c(@reminder-color);
+  }
+  &__count {
+    .c(@reminder-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  &__reload {
+    .c(@text-light);
+  }
+}

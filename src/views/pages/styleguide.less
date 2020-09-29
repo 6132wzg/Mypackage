@@ -1,0 +1,96 @@
+.sg-box {
+  .s(200px, 120px);
+  display: inline-block;
+  vertical-align: top;
+  .pd(16px);
+  border-radius: 2px;
+  .c(@white);
+  .mg(8px);
+  &--primary {
+    .bg(@primary-color);
+  }
+  &--warning {
+    .bg(@warning-color);
+  }
+  &--error {
+    .bg(@error-color);
+  }
+  &--success {
+    .bg(@success-color);
+  }
+  &--border {
+    .bg(@border-color);
+  }
+  &--divider {
+    .bg(@divider);
+  }
+  &--title {
+    .bg(@title);
+  }
+  &--text {
+    .bg(@text);
+  }
+  &--text-secondary {
+    .bg(@text-secondary);
+  }
+  &--text-light {
+    .bg(@text-light);
+  }
+  &--primary-1 {
+    .bg(@primary-1);
+  }
+  &--primary-2 {
+    .bg(@primary-2);
+  }
+  &--primary-3 {
+    .bg(@primary-3);
+  }
+  &--primary-4 {
+    .bg(@primary-4);
+  }
+  &--primary-5 {
+    .bg(@primary-5);
+  }
+  &--primary-6 {
+    .bg(@primary-color);
+  }
+  &--primary-7 {
+    .bg(@primary-7);
+  }
+  &--primary-8 {
+    .bg(@primary-8);
+  }
+  &--primary-9 {
+    .bg(@primary-9);
+  }
+  &--primary-10 {
+    .bg(@primary-10);
+  }
+}
+.sg-section {
+  .mg-b(24px);
+}
+.sg-app-content {
+  .bg(#f0f2f5);
+  .pd(32px);
+}
+
+.sg {
+  display: flex;
+  &__hd {
+    position: fixed;
+    .bg(rgba(255, 255, 255, 0.5));
+    z-index: 10;
+  }
+  &__bd {
+    display: flex;
+    .pd-t(40px);
+  }
+  &__sider {
+    flex: 0 0 250px;
+  }
+  &__main {
+    .mg-l(24px);
+    flex: 1;
+  }
+}

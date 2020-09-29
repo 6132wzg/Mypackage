@@ -1,0 +1,42 @@
+.st-page-route-nav {
+  display: flex;
+  .bg(@bg-gray);
+  min-height: 100%;
+  &__title {
+    .pd(36px);
+  }
+  &__navs {
+    .w(300px);
+  }
+  &__content {
+    flex: 1;
+  }
+  &__nav-item {
+    .pd(18px 36px);
+  }
+  &__nav-link {
+    .fz(14px);
+    .c(@text);
+  }
+  .ant-tabs-tab {
+    margin-right: 0px !important;
+    padding: 18px 36px !important;
+  }
+  .ant-tabs-tab-active {
+    .bg(@white);
+    .c(@title);
+  }
+  .ant-tabs-right-bar {
+    .fl-n;
+  }
+  // 区分系统设置中有左侧tab和顶部tab的样式
+  .ant-tabs-top-bar {
+    .ant-tabs-tab {
+      padding: 12px 0 !important;
+      margin-right: 64px !important;
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+      .c(@primary-color);
+    }
+  }
+}

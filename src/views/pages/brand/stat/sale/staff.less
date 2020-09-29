@@ -1,0 +1,41 @@
+.page-brand-stat-sale-staff {
+  &__panne {
+    padding: 0;
+  }
+  &__section {
+  }
+
+  .st-table .ant-table-tbody > tr > td {
+    word-break: break-all;
+  }
+  .st-table .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    .ant-table-body {
+      min-width: 1470px;
+      overflow: hidden;
+    }
+    .ant-table-expanded-row .ant-table {
+      width: auto;
+      overflow: auto;
+      .ant-table-body {
+        min-width: auto;
+        overflow: hidden;
+      }
+    }
+  }
+  &__table-nodata {
+    .ant-table .ant-table-content .ant-table-body {
+      min-width: auto;
+    }
+  }
+  .flex-1 {
+    flex: 1 1 auto;
+  }
+  .flex-0 {
+    flex: 0 0 auto;
+  }
+  .ant-cascader-picker-label {
+    padding-right: 24px;
+  }
+}

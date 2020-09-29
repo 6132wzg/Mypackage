@@ -1,0 +1,126 @@
+.shop-reception-member-online {
+  .pos-r;
+  .bg(@white);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex: 1;
+  margin-bottom: 16px;
+  min-height: 350px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .pd(16px 16px 6px 16px);
+    .left {
+      display: flex;
+      align-items: center;
+      .check {
+        .mg-r(8px);
+      }
+    }
+    .info {
+      .c(@title);
+      .lh(20px);
+      .fz(14px);
+      font-weight: 500;
+      font-family: PingFangSC-Medium, PingFang SC;
+    }
+    .buttons {
+      .c(#3f6ff6);
+      .lh(20px);
+      .fz(12px);
+      .button {
+        .pd(0);
+      }
+    }
+  }
+  &__list-wrapper {
+    .w(100%);
+    height: calc(100% - 52px);
+    &.noEdit {
+      .ant-list-item {
+        cursor: pointer;
+      }
+    }
+  }
+  &__list {
+    .pos-r;
+    .pd-lr(16px);
+    .h(100%);
+    box-sizing: border-box;
+    .ant-list-item {
+      .pd-tb(8px);
+    }
+  }
+  &__list-item {
+    .w(100%);
+    display: flex;
+    justify-content: space-between;
+    .left {
+      display: flex;
+      align-items: center;
+      .check {
+        .mg-r(8px);
+      }
+      .avatar {
+        .mg-r(8px);
+        display: flex;
+        align-items: center;
+        img {
+          .s(32px, 32px);
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+      .info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .tooltip {
+          width: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .name {
+          .fz(14px);
+          .c(#252a2e);
+          .lh(22px);
+          .h(22px);
+        }
+        .phone {
+          .fz(12px);
+          .c(#5e6a7f);
+          .lh(22px);
+        }
+      }
+    }
+    .right {
+      .w(40px);
+      .time {
+        .fz(12px);
+        .c(#9bacb9);
+        .lh(22px);
+        .ta-r;
+        .tov-e;
+      }
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    .pos-a;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .w(100%);
+    .h(16px);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+}

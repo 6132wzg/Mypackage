@@ -1,0 +1,39 @@
+<template>
+  <div>
+    <title-info v-model="titleData"></title-info>
+    <span style="margin-right:16px">选择时间</span>
+    <time-day
+      v-model="value.getData.no_follow_member"
+      :timeList="timeList"
+    ></time-day>
+  </div>
+</template>
+<script>
+import timeDay from './time-day'
+import titleInfo from './title-info.vue'
+export default {
+  props: {
+    value: Object
+  },
+  components: {
+    titleInfo,
+    timeDay
+  },
+  data() {
+    return {
+      titleData: {
+        title: '最近未跟进用户',
+        info: '选择自然日内，未跟进的用户'
+      },
+      timeList: [
+        { value: 7, name: ' 超过7天' },
+        { value: 15, name: '超过15天' },
+        { value: 30, name: '超过30天' },
+        { value: -1, name: '自定义' }
+      ]
+    }
+  },
+  methods: {},
+  mounted() {}
+}
+</script>

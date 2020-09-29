@@ -1,0 +1,49 @@
+.info-edit {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  .fz(14px);
+  .lh(32px);
+  &__wrapper {
+    flex: 1;
+    display: flex;
+    .c(@text);
+  }
+  &:nth-last-of-type(1) {
+    .mg-b(0);
+  }
+  &__label {
+    .c(@title);
+  }
+  &__content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1;
+  }
+  &__buttons {
+    display: flex;
+  }
+  &__button {
+    .pd-lr(4px);
+  }
+  &__icon {
+    // display: none;
+    visibility: hidden;
+    .mg-l(10px);
+    .c(@primary-color);
+    text-align: right;
+    width: 20px;
+  }
+  &.isEdit {
+    .info-edit__icon {
+      display: none;
+      // visibility: hidden;
+    }
+  }
+}
+.info-edit:not(.isEdit):hover {
+  .info-edit__icon {
+    // display: block;
+    visibility: visible;
+  }
+}

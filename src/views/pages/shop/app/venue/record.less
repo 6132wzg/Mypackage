@@ -1,0 +1,25 @@
+.shop-app-venue-data {
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+  &__action {
+    display: flex;
+  }
+  .ant-table {
+    tr {
+      border-bottom: 1px solid @divider;
+    }
+    .ant-table-thead > tr > th {
+      font-weight: bolder;
+    }
+    .ant-table-tbody > tr > td {
+      // padding: 10px 12px;
+    }
+    .ant-table-row:nth-child(even) {
+      background: inherit;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.modal-reserved-info {
+  display: flex;
+  &__table {
+    width: 100%;
+    overflow: auto;
+    .st-form-table__add-td {
+      padding-left: 0 !important;
+    }
+  }
+  .ant-divider,
+  .ant-divider-vertical {
+    margin: 0 4px;
+  }
+  .action {
+    &__item {
+      .mg-r(8px);
+      &:last-child {
+        .mg-r(0);
+      }
+    }
+  }
+}
+.st-form-table__add-option {
+  .item-name,
+  .item-phone {
+    .c(@title);
+  }
+  .item-phone {
+    margin-left: 8px;
+  }
+}
+.ant-select-selection-selected-value {
+  .item-phone {
+    display: none;
+  }
+}

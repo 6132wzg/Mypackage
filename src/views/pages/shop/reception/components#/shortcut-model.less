@@ -1,0 +1,104 @@
+.shortcut-models-wrapper {
+}
+.shortcut-models {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 688px;
+  .shortcut-model {
+    .pos-r;
+    .s(160px, 166px);
+    .mg-r(16px);
+    .mg-b(16px);
+    .bd-r(4px);
+    .bg(@white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(230, 233, 239, 1);
+    cursor: pointer;
+    &.add {
+      .bg(#f7f9fc);
+      border: 1px dashed rgba(205, 212, 223, 1);
+      .icon {
+        .mg-tb(50px, 10px);
+        .s(32px, 32px);
+      }
+      .tip {
+        .fz(14px);
+        .lh(22px);
+        .c(@text);
+      }
+      &:hover {
+        .bg(#f7f9fc);
+        border: 1px dashed rgba(205, 212, 223, 1);
+        box-shadow: 0px 0px 10px 0px rgba(56, 62, 68, 0.1);
+      }
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(63, 102, 246, 0.2);
+      box-shadow: 0px 0px 10px 0px rgba(56, 62, 68, 0.1);
+      .shortcut-model-del {
+        opacity: 1;
+        transition-delay: 400ms;
+      }
+      .shortcut-model-del:hover {
+        .c(rgba(155, 172, 185, 1));
+      }
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .s(68px, 68px);
+      .mg-tb(32px, 12px);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      &.member-bill {
+        background-image: url('~@/assets/img/shop/reception/member-bill@2x.png');
+      }
+      &.personal-bill {
+        background-image: url('~@/assets/img/shop/reception/personal-bill@2x.png');
+      }
+      &.deposit-bill {
+        background-image: url('~@/assets/img/shop/reception/deposit-bill@2x.png');
+      }
+      &.package-bill {
+        background-image: url('~@/assets/img/shop/reception/package-bill@2x.png');
+      }
+      &.small-course-bill {
+        background-image: url('~@/assets/img/shop/reception/small-course-bill@2x.png');
+      }
+      &.cabinet-bill {
+        background-image: url('~@/assets/img/shop/reception/cabinet-bill@2x.png');
+      }
+      &.earnest-bill {
+        background-image: url('~@/assets/img/shop/reception/earnest-bill@2x.png');
+      }
+      &.reserve-bill {
+        background-image: url('~@/assets/img/shop/reception/reserve-bill@2x.png');
+      }
+    }
+    &-label {
+      .fz(14px);
+      .c(@title);
+    }
+    &-del {
+      .pos-a;
+      top: 8px;
+      right: 8px;
+      .s(16px, 16px);
+      opacity: 0;
+      .c(rgba(155, 172, 185, 0.45));
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .shortcut-model:nth-of-type(4n) {
+    .mg-r(0);
+  }
+}

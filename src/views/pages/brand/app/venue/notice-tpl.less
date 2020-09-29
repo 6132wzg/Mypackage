@@ -1,0 +1,39 @@
+.page-brand-app-venue-notice-tpl {
+  .venue-notice-table {
+    .w(100%);
+    &__title {
+      background: @bg-gray;
+    }
+    &__th {
+      display: inline-block;
+      .fz(14px);
+      .ta-l;
+      .c(@text-secondary);
+      padding: 16px 0 16px 0;
+      &:first-child {
+        .w(180px);
+        padding-left: 24px;
+      }
+    }
+    &__tr {
+      border-bottom: 1px solid @divider;
+    }
+    &__th-wrap {
+      width: calc(~'100% - 190px');
+      display: inline-block;
+      .th {
+        display: inline-block;
+        width: 25%;
+        padding-left: 34px;
+      }
+      .th:nth-child(3) {
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      .th:nth-child(4) {
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

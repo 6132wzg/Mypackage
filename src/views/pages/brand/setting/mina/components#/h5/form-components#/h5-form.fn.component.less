@@ -1,0 +1,105 @@
+.h5-form-component {
+  &__title {
+    &-switch {
+      font-size: 14px;
+      line-height: 22px;
+      color: rgba(155, 172, 185, 1);
+      flex: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__radio {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 22px;
+    &-title {
+      color: rgba(37, 42, 46, 1);
+      margin-bottom: 8px;
+    }
+    &-desc {
+      color: rgba(155, 172, 185, 1);
+      margin-top: 10px;
+    }
+  }
+  &__form {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    &-item {
+      max-width: 488px;
+      height: 88px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-right: 34px;
+      border: 1px solid rgba(230, 233, 239, 1);
+      cursor: move;
+      .h5-form-component__form-delete {
+        display: none;
+      }
+      &:hover {
+        .h5-form-component__form-delete {
+          display: flex;
+        }
+      }
+    }
+    &-img {
+      flex: none;
+      width: 88px;
+      height: 88px;
+      position: relative;
+      margin-right: 32px;
+      &-icon {
+        width: 88px;
+        height: 88px;
+      }
+      &-edit {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 88px;
+        line-height: 26px;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.45);
+      }
+    }
+    &-input {
+      flex: auto;
+    }
+    &-name {
+      display: flex;
+      align-items: center;
+      &-label {
+        flex: none;
+      }
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      &-label {
+        flex: none;
+      }
+    }
+    &-delete {
+      display: flex;
+      width: 28px;
+      height: 28px;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background: rgba(255, 240, 237, 1);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+  }
+}
+.h5-form-fn-component {
+  &__add {
+    max-width: 488px;
+  }
+}

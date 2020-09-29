@@ -1,0 +1,48 @@
+@preview-width: 368px;
+.st-mina-panel {
+  min-height: 100%;
+  display: flex;
+  &--initial {
+    .st-mina-panel__content {
+      padding: 0;
+    }
+  }
+  &__preview {
+    width: @preview-width;
+    .bg(@bg-gray);
+  }
+  &__main {
+    flex: 1;
+    .pos-r;
+    .bg(@white);
+  }
+  &__content {
+    padding: 24px 24px 56px 24px;
+  }
+  &__actions {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 16px;
+    background-color: rgba(@white, 0.8);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px 10px 1px rgba(@black, 0.05);
+    &--fixed {
+      .pos-f;
+      z-index: 3;
+      right: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .st-mina-panel {
+    &--responsive-preview {
+      .st-mina-panel__preview {
+        display: none;
+      }
+    }
+  }
+}

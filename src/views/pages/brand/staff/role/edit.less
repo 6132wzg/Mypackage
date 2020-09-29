@@ -1,0 +1,26 @@
+.page-role-info {
+  display: block;
+  &__edit {
+    width: 100%;
+    padding: 24px 24px 0 0;
+    .jurisdiction {
+      display: flex;
+      .brand-list {
+        margin-right: 12px;
+      }
+      .shop-list,
+      .brand-list {
+        flex: 1;
+        height: 500px;
+        overflow-y: auto;
+      }
+      .shop-list::-webkit-scrollbar,
+      .brand-list::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  &__btn {
+    margin-left: 108px;
+  }
+}

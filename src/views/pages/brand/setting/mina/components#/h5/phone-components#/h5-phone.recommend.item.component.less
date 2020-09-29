@@ -1,0 +1,138 @@
+.h5-phone-recommend-item-component-1 {
+  &__image {
+    width: 300px;
+    height: 225px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      object-fit: cover;
+      image-rendering: pixelated;
+    }
+    &-tag {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  &__name {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    color: rgba(34, 34, 34, 1);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-top: 16px;
+  }
+  &__desc {
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(102, 102, 102, 1);
+    margin-top: 8px;
+  }
+  &__tags {
+    margin-top: 8px;
+  }
+  &__tag {
+    font-size: 22px;
+    line-height: 1;
+    color: rgba(102, 102, 102, 1);
+    padding: 4px;
+    background: rgba(244, 245, 246, 1);
+    border-radius: 2px;
+  }
+  &__price {
+    margin-top: 8px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    color: rgba(255, 80, 90, 1);
+    &::before {
+      margin-right: 4px;
+      content: '¥';
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold;
+      color: rgba(255, 80, 90, 1);
+    }
+  }
+}
+.h5-phone-recommend-item-component-2 {
+  display: flex;
+  &__image {
+    flex: none;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 16px;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      object-fit: cover;
+      image-rendering: pixelated;
+    }
+    &-tag {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  &__right {
+    flex: auto;
+  }
+  &__name {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    color: rgba(34, 34, 34, 1);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-top: 16px;
+  }
+  &__desc {
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(102, 102, 102, 1);
+    margin-top: 8px;
+  }
+  &__tags {
+    margin-top: 8px;
+  }
+  &__tag {
+    font-size: 22px;
+    line-height: 1;
+    color: rgba(102, 102, 102, 1);
+    padding: 4px;
+    background: rgba(244, 245, 246, 1);
+    border-radius: 2px;
+  }
+  &__price {
+    margin-top: 8px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    color: rgba(255, 80, 90, 1);
+    &::before {
+      margin-right: 4px;
+      content: '¥';
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: bold;
+      color: rgba(255, 80, 90, 1);
+    }
+  }
+}

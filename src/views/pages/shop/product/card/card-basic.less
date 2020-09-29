@@ -1,0 +1,220 @@
+.page-shop-basic-card {
+  .page-a-form {
+    display: inline-block;
+    .ant-form-item-control-wrapper {
+      padding-left: 0;
+    }
+  }
+
+  .page-content {
+    .pd-t(16px);
+    &-card-input {
+      .w(360px);
+    }
+    &-card-small-select {
+      width: 50px !important;
+    }
+    &-card-num-input {
+      .w(200px);
+    }
+    &-table-input {
+      .w(100px);
+    }
+    &-card-admission-range {
+      .page-admission-range-shop {
+        min-width: 580px;
+        position: relative;
+        padding: 0 12px 8px;
+        margin-top: 8px;
+        border: 1px solid @normal-color;
+        border-radius: 4px;
+        &__describe {
+          font-size: 14px;
+          .lh(20px);
+          .c(rgba(@black, 0.25));
+          .mg-tb(12px);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          .s(10px, 10px);
+          transform: rotate(45deg);
+          top: -6px;
+          left: 130px;
+          border-left: 1px solid @normal-color;
+          border-top: 1px solid @normal-color;
+          .bg(#fff);
+        }
+      }
+    }
+    &-card-price-setting {
+      .page-price-setting-set {
+        min-width: 580px;
+        position: relative;
+        padding: 12px 12px 0;
+        margin-top: 8px;
+        border: 1px solid @normal-color;
+        border-radius: 4px;
+        &-error {
+          border-color: @error-color;
+        }
+        &__add {
+          .mg-tb(8px);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          transform: rotate(45deg);
+          top: -6px;
+          border-left: 1px solid @normal-color;
+          border-top: 1px solid @normal-color;
+          .bg(#fff);
+        }
+        &.brand-set {
+          &::after {
+            .s(10px, 10px);
+            left: 30px;
+          }
+        }
+        &.shop-set {
+          &::after {
+            .s(10px, 10px);
+            left: 180px;
+          }
+        }
+      }
+      .ant-form-explain {
+        color: @error-color;
+      }
+    }
+    &-card-support-sales {
+      .page-support-sales-shop {
+        min-width: 580px;
+        position: relative;
+        padding: 0 12px 8px;
+        margin-top: 8px;
+        border: 1px solid @normal-color;
+        border-radius: 4px;
+        &__describe {
+          font-size: 14px;
+          .lh(20px);
+          .c(rgba(@black, 0.25));
+          .mg-tb(12px);
+        }
+        &__add {
+          .mg-tb(8px);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          .s(10px, 10px);
+          transform: rotate(45deg);
+          top: -6px;
+          left: 130px;
+          border-left: 1px solid @normal-color;
+          border-top: 1px solid @normal-color;
+          .bg(#fff);
+        }
+        &.page-lot-shop::after {
+          left: 270px;
+        }
+      }
+    }
+    &-card-time {
+      &__icon {
+        .cur-p;
+      }
+    }
+    &-card-transfer {
+      &-body {
+        display: flex;
+        align-items: center;
+        height: 34px;
+        .page-checkbox {
+          flex: none;
+        }
+        .page-input-group {
+          flex: none;
+        }
+      }
+    }
+    &-card-bg {
+      .page-card-bg {
+        display: flex;
+        align-items: center;
+        &-default {
+          .s(192px, 108px);
+          .bg(#ccc);
+          border-radius: 4px;
+          margin-right: 10px;
+        }
+        &-upload {
+          .s(192px, 108px);
+          .bg(@normal-color);
+          border-radius: 4px;
+        }
+      }
+    }
+    &-card-textarea {
+      margin-top: 2px;
+    }
+  }
+}
+// 卡详情
+.page-shop-card-info {
+  p {
+    margin: 0;
+  }
+  .label {
+    .fz(14px);
+    .lh(22px);
+    .c(@title);
+  }
+  .value {
+    .fz(14px);
+    .lh(22px);
+    .c(@text);
+  }
+
+  .page-content {
+    .shop-card {
+      &__card_name {
+        display: flex;
+        align-items: center;
+      }
+      &__card_bg {
+        border-radius: 4px;
+      }
+      &__name_time {
+        margin-left: 16px;
+        .fz(14px);
+        .lh(22px);
+        .c(@title);
+        .shop-card__sellstop {
+          .c(@error-color);
+        }
+        .shop-card__selling {
+          .c(@success-color);
+        }
+      }
+      &__name {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        > span:nth-of-type(1) {
+          .mg-lr(8px, 16px);
+          .fz(16px);
+          .lh(24px);
+        }
+      }
+      &__shelf-status {
+        margin-left: 8px;
+      }
+      &__time {
+        > span:nth-of-type(2) {
+          .c(@text);
+        }
+      }
+    }
+  }
+}

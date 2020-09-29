@@ -1,0 +1,40 @@
+.markting-plugin-title {
+  min-height: 190px;
+  background: @white;
+  box-shadow: 0px 1px 10px 1px rgba(@black, 0.05);
+  border-radius: 2px;
+  display: flex;
+  margin-bottom: 12px;
+  padding: 24px;
+  &__left {
+    flex: 1;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    margin: 0;
+  }
+  &__content {
+    color: @text-light;
+    line-height: 22px;
+    margin: 8px 0 24px 0;
+  }
+  &__footer {
+    margin: 0;
+    > label {
+      color: rgba(63, 102, 246, 1);
+      line-height: 22px;
+      cursor: pointer;
+      margin-right: 24px;
+    }
+  }
+  &__right {
+    font-size: 0;
+    .imgBox {
+      display: inline-block;
+      position: relative;
+      margin-left: 24px;
+    }
+  }
+}

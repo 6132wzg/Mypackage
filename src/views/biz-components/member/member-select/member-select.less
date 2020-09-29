@@ -1,0 +1,35 @@
+.member-select {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #eaeef4;
+  .st-select-scroll,
+  .ant-select {
+    width: 100%;
+  }
+  .ant-select-selection {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .ant-select-open .ant-select-arrow-icon svg {
+    transform: rotate(0);
+  }
+  .ant-select-selection__clear {
+    margin-top: -8px;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+  }
+  .ant-select-arrow {
+    margin-top: -8px;
+    font-size: 16px;
+    color: #9bacb9;
+    &:hover {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}

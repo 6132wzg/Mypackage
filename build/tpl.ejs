@@ -1,0 +1,36 @@
+/**
+* this js file is auto generated, you should not modifyed this file
+**/
+<% importServiceArray.forEach(item => { %>
+const <%- item.asService %> = () => import(/* webpackChunkName: "<%- item.chunkName%>" */ '<%- item.servicePath %>').then(m => m.<%-item.service %>)
+<% }); %>
+<% importArr.forEach(item => { %>
+const <%- item.component%> = () => import(/* webpackChunkName: "<%- item.chunkName%>" */ '<%- item.pagePath%>')
+<% }); %>
+// service
+const pageRoutes = [<% pageRoutes.forEach((item, index) => {%>{
+  name: '<%- item.name %>',
+  path: '<%- item.path %>',
+  component: <%- item.component %>,
+  controller: <%- item.controller %><% if(item.children){%>,<%};%><% if(item.children){%>
+  children: [<%item.children.forEach((c1Item, c1Index) => {%>{
+    name: '<%- c1Item.name %>',
+    path: '<%- c1Item.path %>',
+    component: <%- c1Item.component %>,
+    controller: <%- c1Item.controller %><% if(c1Item.children){%>,<%};%><% if(c1Item.children){%>
+    children: [<%c1Item.children.forEach( ( c2Item, c2Index )=> {%>{
+      name: '<%- c2Item.name %>',
+      path: '<%- c2Item.path %>',
+      component: <%- c2Item.component %>,
+      controller: <%- c2Item.controller %><% if(c2Item.children){%>,<%};%><% if(c2Item.children){%>
+      children: [<%c2Item.children.forEach(c3Item => {%>{
+          name: '<%- c3Item.name %>',
+          path: '<%- c3Item.path %>',
+          component: <%- c3Item.component %>,
+          controller: <%- c3Item.controller %>},<%});%>
+        ]<% if(c2Index !== c1Item.children.length-1){%>, <%};%><%};%>
+    }<% if(c2Index !== c1Item.children.length-1){%>, <%};%><%});%>]<%};%>
+  }<% if(c1Index !== item.children.length-1){%>, <%};%><%});%>]<%};%>
+}<%if(index !== pageRoutes.length-1){%>, <%}%><% }); %>]
+
+export default pageRoutes

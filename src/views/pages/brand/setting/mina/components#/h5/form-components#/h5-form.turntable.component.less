@@ -1,0 +1,29 @@
+.h5-form-turntable-component {
+  &__add {
+    width: 466px;
+    height: 170px;
+    margin-top: 16px;
+    border: 1px dashed rgba(230, 233, 239, 1);
+  }
+  &__select {
+    position: relative;
+    width: 466px;
+    height: 170px;
+    margin-top: 16px;
+    border: 1px solid rgba(230, 233, 239, 1);
+    background: rgba(247, 249, 252, 1);
+    overflow: hidden;
+    &:hover {
+      .h5-form-component__del {
+        visibility: visible;
+      }
+    }
+  }
+  &__name {
+    font-size: 14px;
+    line-height: 46px;
+    padding-left: 16px;
+    color: rgba(37, 42, 46, 1);
+    background: #fff;
+  }
+}

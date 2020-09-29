@@ -1,0 +1,36 @@
+.page-add-select-package {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  &__content {
+    display: flex;
+  }
+  &__item {
+    width: 328px;
+    height: 360px;
+    margin: 0 12px;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.09);
+    }
+  }
+  &__text {
+    padding: 69px 24px;
+    .c(@white);
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.11);
+    .c(@white);
+  }
+  &__describe {
+    font-size: 16px;
+    .lh(22px);
+    margin: 0;
+  }
+}

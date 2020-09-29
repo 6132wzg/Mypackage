@@ -1,0 +1,36 @@
+.modal-common-notify-info {
+  .st-modal__body {
+    padding: 32px;
+    min-height: 384px;
+  }
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+  &__title {
+    .fz(20px);
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__item-img {
+    display: inline-block;
+    .s(20px, 20px);
+    border-radius: 100%;
+    border: 1px solid @bg-gray;
+    img {
+      .s(100%, 100%);
+      display: block;
+    }
+  }
+  &__content {
+    .mg-t(48px);
+  }
+  &__item-type {
+    .c(@text);
+  }
+  &__item-time {
+    .c(@text-light);
+  }
+}

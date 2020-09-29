@@ -1,0 +1,100 @@
+@import './active.less';
+// 限时打折模块公共样式
+.h5-phone-discount-component {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .active();
+  // 限时打折盒子样式
+  &__box {
+    position: relative;
+  }
+  // 限时打折头部样式
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-title {
+      font-size: 36px;
+      font-weight: 500;
+      z-index: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+    &-button {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      margin-left: 12px;
+      font-size: 28px;
+      z-index: 1;
+    }
+  }
+  &__list {
+    margin-top: 24px;
+  }
+  &__slide {
+  }
+  // 限时打折竖排布局样式
+  &__column {
+    .h5-phone-discount-component {
+      // 限时打折盒子样式
+      &__box {
+        margin: 0 40px;
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0.95) 100%
+        );
+        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+      }
+      // 限时打折头部样式
+      &__header {
+        padding: 0 24px;
+        height: 80px;
+        color: #fff;
+        &-bg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 0;
+        }
+      }
+      &__list {
+        padding: 0 0 24px;
+      }
+    }
+  }
+  // 限时打折横排布局样式
+  &__row {
+    .h5-phone-discount-component {
+      // 限时打折头部样式
+      &__header {
+        margin: 0 40px;
+        padding: 0;
+        height: 44px;
+        &-bg {
+          display: none;
+        }
+        &-title {
+          color: #222222;
+        }
+        &-button {
+          color: #999999;
+        }
+      }
+      // 列表
+      &__list {
+        width: 750px;
+        padding-left: 40px !important;
+      }
+      // 滑动slide
+      &__slide {
+        width: 348px !important;
+      }
+    }
+  }
+}

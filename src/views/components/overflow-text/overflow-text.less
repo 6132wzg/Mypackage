@@ -1,0 +1,24 @@
+.st-overflow-text-wrapper {
+  .pos-r;
+  word-break: break-all;
+}
+.st-overflow-text {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  &__overlay {
+    min-width: 380px;
+  }
+  &__max {
+    max-width: 380px;
+  }
+}
+.ant-popover-inner-content {
+  max-height: 350px;
+  overflow-y: auto;
+  span {
+    word-break: break-word;
+  }
+}

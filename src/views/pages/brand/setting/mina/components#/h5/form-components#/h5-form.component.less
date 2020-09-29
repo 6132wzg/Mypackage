@@ -1,0 +1,114 @@
+.h5-form-component {
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-text {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: rgba(37, 42, 46, 1);
+    }
+    &-desc {
+      margin-right: 10px;
+    }
+  }
+  &__direction {
+    margin-top: 24px;
+    display: flex;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(37, 42, 46, 1);
+    &-label {
+      margin-right: 24px;
+    }
+  }
+  &__rule {
+    margin-top: 24px;
+    display: flex;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(37, 42, 46, 1);
+    &-label {
+      flex: none;
+      margin-right: 24px;
+    }
+    .ant-radio-wrapper {
+      margin-bottom: 16px;
+    }
+  }
+  &__content {
+    margin-top: 24px;
+    &-label {
+      font-size: 14px;
+      line-height: 22px;
+      color: rgba(37, 42, 46, 1);
+    }
+    &-desc {
+      font-size: 14px;
+      line-height: 22px;
+      color: rgba(155, 172, 185, 1);
+      margin-top: 4px;
+    }
+  }
+  &__del {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: rgba(255, 240, 237, 1);
+    border-radius: 2px;
+    visibility: hidden;
+    cursor: pointer;
+  }
+  &__box {
+    position: relative;
+    width: 180px;
+    height: 148px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(230, 233, 239, 1);
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    &:hover {
+      .h5-form-component__del {
+        visibility: visible;
+      }
+    }
+  }
+  &__add {
+    border-style: dashed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 22px;
+    flex-direction: row;
+    color: rgba(62, 77, 92, 1);
+    background: rgba(247, 249, 252, 1);
+    &-label {
+      margin-left: 5px;
+    }
+  }
+
+  &__bg {
+    width: 180px;
+    height: 100px;
+  }
+  &__name {
+    max-width: 148px;
+    font-size: 14px;
+    line-height: 46px;
+    padding-left: 16px;
+    color: rgba(37, 42, 46, 1);
+  }
+  &__draggable-icon {
+    position: absolute;
+    right: -2px;
+    bottom: 0;
+  }
+}

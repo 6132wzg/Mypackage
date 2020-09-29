@@ -1,0 +1,43 @@
+.page-shop-package-list {
+  &__operation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  &__select + &__select {
+    margin-left: 8px;
+  }
+  .tooltip-span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+  }
+  &__saletime {
+    display: flex;
+    align-items: center;
+    > span {
+      flex: none;
+      height: 32px;
+      margin: 0 8px 24px;
+    }
+    .page-a-form {
+      flex: auto;
+      .ant-form-item-control-wrapper {
+        padding-left: 0;
+      }
+      .ant-calendar-picker {
+        width: 100%;
+      }
+    }
+  }
+}
+.modal-shop-product-course-package {
+  .ant-modal-body {
+    padding-bottom: 0;
+  }
+  .ant-modal-footer {
+    padding: 24px;
+  }
+}

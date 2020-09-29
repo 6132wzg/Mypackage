@@ -1,0 +1,74 @@
+.modal-sms-pay-setting {
+  &__count {
+    display: inline-block;
+    .w(119px);
+    .h(100px);
+    .mg-r(6px);
+    .pd(8px);
+    border: 1px solid @divider;
+    .ta-c;
+    .cur-p;
+
+    &--active {
+      border: 1px solid @primary-color;
+    }
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__count:last-child {
+    .mg-r(0);
+  }
+
+  &__payway {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      .w(100%);
+      .mg-t(23px);
+      .h(40px);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      height: 40px;
+      border: 1px solid @divider;
+      .cur-p;
+      &--active {
+        border: 1px solid @primary-color;
+      }
+    }
+  }
+
+  &__specify {
+    border-bottom: 1px solid @divider;
+  }
+
+  &__total-money {
+    display: block;
+    .fz(16px);
+    font-family: PingFangSC-Medium, PingFangSC;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
+  &__single-price {
+    display: inline-block;
+    font-family: PingFangSC;
+
+    .fz(12px);
+    line-height: 17px;
+    .mg-t(8px);
+    .mg-b(7px);
+    .c(@text-light);
+  }
+  &__total-num {
+    display: block;
+    font-size: 14px;
+    font-family: PingFangSC;
+    font-weight: 400;
+    color: @title;
+    line-height: 20px;
+    .mg-t(8px);
+  }
+}

@@ -1,0 +1,50 @@
+.shop-member-crowd-add {
+  &__box {
+    display: flex;
+  }
+
+  &__left {
+    flex: 1;
+    max-width: 404px;
+    background: @bg-gray;
+    padding: 32px 24px;
+  }
+
+  &__right {
+    flex: 1;
+    background: #ffffff;
+    padding: 32px 24px;
+  }
+
+  &__right-condition {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(230, 233, 239);
+  }
+
+  &__right-condition-box {
+    background: @white;
+    margin-top: 16px;
+    padding: 24px;
+    box-shadow: 0px 1px 10px 1px rgba(@black, 0.05);
+    position: relative;
+  }
+
+  &__right-condition-box-delete {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+  }
+  &__icon {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+  &__right-tip {
+    color: @text-light;
+    > label {
+      color: @primary-color;
+    }
+  }
+}

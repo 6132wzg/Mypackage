@@ -1,0 +1,29 @@
+.page-dashboard-plugin a {
+  display: flex;
+  align-items: center;
+  .image {
+    .s(60px, 60px);
+    .mg-r(10px);
+    img {
+      .s(100%, 100%);
+    }
+  }
+  .text {
+    position: relative;
+    top: 5px;
+    margin-top: 4px;
+    .t4 {
+      font-weight: bold;
+    }
+    .detail {
+      font-size: 14px;
+      font-weight: 400;
+      color: @text-light;
+      line-height: 22px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 162px;
+    }
+  }
+}

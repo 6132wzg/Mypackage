@@ -1,0 +1,151 @@
+.biz-package-form {
+  .tip {
+    font-size: 14px;
+    color: @text-light;
+    line-height: 20px;
+  }
+  &__has-not-data {
+    /* 消除掉外边框 */
+    border-style: hidden;
+    /* hack一下加个阴影 */
+    box-shadow: 0 0 0 1px #e6e9ef;
+    border-radius: 0 0 4px 4px;
+  }
+  .has-data {
+    border: 1px solid #e6e9ef;
+    border-top: 0;
+  }
+  &__has-data {
+    .ant-table-body {
+      /* 消除掉外边框 */
+      border-style: hidden;
+      /* hack一下加个阴影 */
+      box-shadow: 0 0 0 1px #e6e9ef;
+      border-radius: 0 0 4px 4px;
+    }
+  }
+  &__course-spec {
+    .pd-t(4px);
+    display: flex;
+    flex-direction: column;
+  }
+  &__course-select {
+    .st-form-table {
+      thead {
+        /* 消除单元格之间的空隙 */
+        border-collapse: collapse;
+        /* 消除掉外边框 */
+        border-style: hidden;
+        /* hack一下加个阴影 */
+        box-shadow: 0 0 0 1px #e6e9ef;
+        border-radius: 4px 4px 0 0;
+        & > tr {
+          th {
+            border-top: 1px solid #e6e9ef;
+            line-height: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            background: #f5f6f8;
+            color: #7f8da6;
+            white-space: nowrap;
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+    .st-form-table__add {
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    &-button {
+      width: 98%;
+    }
+    &-table {
+      .ant-table {
+        border: 1px solid #e6e9ef;
+        border-top: 0;
+      }
+      .ant-table-thead {
+        display: none;
+      }
+    }
+  }
+  .ant-table-expanded-row-level-1 td:first-child {
+    display: none;
+  }
+  .has-error .ant-radio-wrapper.ant-radio-wrapper-checked .ant-input,
+  .has-error .ant-radio-wrapper.ant-radio-wrapper-checked .ant-input:hover {
+    border-color: #ff5e41;
+  }
+  .has-error
+    .ant-radio-wrapper.ant-radio-wrapper-checked
+    .ant-input-group-addon {
+    color: #ff5e41;
+    background-color: #fff;
+    border-color: #ff5e41;
+  }
+  .has-error .ant-radio-wrapper .ant-input,
+  .has-error .ant-radio-wrapper .ant-input:hover {
+    border-color: #cdd4df;
+  }
+  .ant-table-thead {
+    .bg(#f2f4f7);
+    font-size: 14px;
+    font-weight: 500;
+    color: #7f8da6;
+    line-height: 20px;
+  }
+  .ant-table-thead > tr > th {
+    background: #f5f6f8;
+    color: #7f8da6;
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+  .has-error .ant-radio-wrapper .ant-input-group-addon {
+    color: #3e4d5c;
+    background-color: #fafafa;
+    border-color: #cdd4df;
+  }
+  &__reserve-limit,
+  &__price-setting,
+  &__freeze-item,
+  &__transfer-item,
+  &__sale-time {
+    display: flex;
+    .st-form-item.input-number .ant-form-item-control-wrapper {
+      .pd-l(12px);
+    }
+    .st-form-item.input-number-pd0.ant-form-item {
+      .mg-b(0);
+      .ant-form-item-control-wrapper {
+        .pd-l(0);
+      }
+    }
+  }
+
+  .st-table .ant-table-tbody > tr > td {
+    border-bottom: 1px solid #e6e9ef;
+  }
+  .st-table .ant-table-tbody > tr {
+    &:last-child {
+      td {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+}
+.package-fix__course-list {
+  .ant-table-tbody > tr {
+    background: #fafafa;
+  }
+}

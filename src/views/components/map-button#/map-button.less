@@ -1,0 +1,34 @@
+.st-map-button {
+  display: inline-block;
+  .fz(14px);
+  .lh(20px);
+  .c(@text);
+  cursor: pointer;
+  &__add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .s(220px, 126px);
+    padding-top: 32px;
+    border-radius: 4px;
+    background: url('~@/assets/img/bg_mapbutton_add.png') center/cover no-repeat;
+  }
+  &__icon {
+    .c(@text);
+    margin-bottom: 12px;
+  }
+  &__update {
+    .s(280px, 126px);
+    padding: 16px;
+    background: url('~@/assets/img/bg_mapbutton_update.png') center/cover
+      no-repeat;
+    > p {
+      .w(200px);
+      &:nth-of-type(2) {
+        .fz(12px);
+        margin-top: 12px;
+        .c(@text-light);
+      }
+    }
+  }
+}

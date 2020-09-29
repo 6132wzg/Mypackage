@@ -1,0 +1,35 @@
+@import './_vars.less';
+/**
+ * 用于覆写 antdesign 变量
+ * 开发尽量不要直接使用
+ */
+// antd colors
+// https://github.com/vueComponent/ant-design-vue/blob/master/components/style/themes/default.less
+// --colors--
+// 这些变量在_vars.less中已同名定义
+// @primary-color: #3f66f6;
+// @info-color: @primary-color;
+// @link-color: #1890ff; // 链接色
+// @success-color: #3dd49f; // 成功色
+// @warning-color: #f5a623; // 警告色
+// @error-color: #ff5e41;
+// @normal-color: #d9d9d9;
+// @white: #fff;
+// @black: #000;
+
+// Palette
+@primary-1: ~`colorPalette('@{primary-color}', 1) `;
+@primary-2: ~`colorPalette('@{primary-color}', 2) `;
+@primary-3: ~`colorPalette('@{primary-color}', 3) `;
+@primary-4: ~`colorPalette('@{primary-color}', 4) `;
+@primary-5: ~`colorPalette('@{primary-color}', 5) `;
+@primary-7: ~`colorPalette('@{primary-color}', 7) `;
+@primary-8: ~`colorPalette('@{primary-color}', 8) `;
+@primary-9: ~`colorPalette('@{primary-color}', 9) `;
+@primary-10: ~`colorPalette('@{primary-color}', 10) `;
+
+// base
+@heading-color: @title;
+@text-color: @text;
+@text-color-secondary: @text-light;
+@border-color-base: @border-color;

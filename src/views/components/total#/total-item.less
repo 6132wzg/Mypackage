@@ -1,0 +1,23 @@
+.st-total {
+  border-radius: 4px;
+  overflow: hidden;
+  &-item__active {
+    cursor: pointer;
+    .st-total__item-value {
+      .c(@primary-color);
+    }
+  }
+  &__item {
+    .mg(0 24px);
+  }
+  &__item-value {
+    font-size: 16px;
+    .mg-t(8px);
+    color: @title;
+    line-height: 24px;
+  }
+  &__item-label {
+    color: @text-secondary;
+    line-height: 24px;
+  }
+}

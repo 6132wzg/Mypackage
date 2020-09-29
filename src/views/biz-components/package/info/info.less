@@ -1,0 +1,43 @@
+.biz-package-info {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    .pd(32px 0 24px 0);
+    &-right {
+      &-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: @title;
+        line-height: 28px;
+      }
+    }
+    &-left {
+      display: flex;
+      &-img {
+        width: 281px;
+        height: 158px;
+        border-radius: 4px;
+      }
+      .font-number {
+        font-size: 30px;
+        display: inline-block;
+        .c(#252a2e);
+      }
+      .font-unit {
+        display: inline-block;
+        vertical-align: text-bottom;
+      }
+      .limit,
+      .validate {
+        color: @text;
+        line-height: 22px;
+      }
+    }
+  }
+  &__other-info {
+    .pd-b(80px);
+  }
+  &__course-title {
+    display: flex;
+  }
+}

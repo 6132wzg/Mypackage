@@ -1,0 +1,45 @@
+.page-setting-sms-notice {
+  &-item {
+    &__table {
+      .w(100%);
+      &-title {
+        background: @bg-gray;
+      }
+
+      &-th {
+        display: inline-block;
+        .fz(14px);
+        .ta-l;
+        .c(@text-secondary);
+        padding: 16px 0 16px 0;
+      }
+      &-th:first-child {
+        .w(180px);
+        padding-left: 24px;
+      }
+      &-tr {
+        border-bottom: 1px solid @divider;
+      }
+      .th-wrap {
+        width: calc(~'100% - 190px');
+        display: inline-block;
+        .th {
+          display: inline-block;
+          width: 25%;
+          padding-left: 10px;
+        }
+        .shop-th {
+          width: 20%;
+        }
+        .th:first-child {
+          padding-left: 34px;
+          box-sizing: border-box;
+        }
+        .th:nth-child(2) {
+          padding-left: 34px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

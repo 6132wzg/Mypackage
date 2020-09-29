@@ -1,0 +1,66 @@
+.h5-component__wrapper {
+  max-width: 357px;
+  max-height: 604px;
+}
+
+.h5-component__scroll {
+  .pos-r();
+  .bd-r(20px);
+  // .w(355px);
+  .w(957px);
+  margin: 0 auto;
+  padding: 36px 41px 65px 38px;
+  background-image: url('~@/assets/img/brand/setting/mina/phone.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: scale(0.3875);
+  transform-origin: left top;
+  .h(1622px);
+  perspective: 1px;
+}
+.h5-component {
+  padding: 0 0 30px;
+  width: 750px;
+  .h(1356px);
+  overflow-y: auto;
+  .bg(#fff);
+  border-radius: 60px 60px 0 0;
+  margin: 63px 0 0 67px;
+  &::-webkit-scrollbar {
+    .s(0, 0);
+  }
+  > .st-title--t3 {
+    .pd-t(40px);
+    .lh(36px);
+    .fz(36px);
+  }
+  &__nav {
+    display: flex;
+    .pos-a();
+    bottom: 70px;
+    left: 105px;
+    right: 102px;
+    .bg(#fff);
+    .pd-t(11px);
+    // padding-bottom: 16px;
+    z-index: 1;
+    border-radius: 0 0 60px 60px;
+    .nav-li {
+      flex: 1;
+      .ta-c();
+      .fz(20px);
+      .lh(28px);
+    }
+    img {
+      .s(44px, 44px);
+    }
+    &-home {
+      position: absolute;
+      .s(96px, 3px);
+      background-color: #000;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

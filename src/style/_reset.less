@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'bebas';
+  src: url('~@/assets/font/bebas.woff2') format('woff2'),
+    url('~@/assets/font/bebas.woff') format('woff'),
+    url('~@/assets/font/bebas.ttf') format('truetype'),
+    url('~@/assets/font/bebas.eot') format('embedded-opentype');
+}
+
+body {
+  min-width: 1200px;
+  .bg(#f0f2f5);
+}
+ul,
+hr,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+a:focus {
+  text-decoration: none;
+}
+*::selection {
+  color: inherit;
+  .bg(#b1d7ff);
+}
+
+::-webkit-scrollbar {
+  .w(8px);
+}
+::-webkit-scrollbar:horizontal {
+  .h(8px);
+}
+
+::-webkit-scrollbar-track {
+  .bg(@white);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(@black, 0.15);
+  &:hover {
+    background-color: #aaa;
+  }
+}
+
+.git {
+  background: rgba(@primary-color, 0.8);
+}
+
+#nprogress .bar {
+  background-color: #77b6ff;
+  box-shadow: 0 0 10px rgba(119, 182, 255, 0.7);
+  height: 3px;
+}
+// 无痕验证滑块样式
+.btn_ok {
+  color: @success-color !important;
+}
+.nc_bg {
+  width: 0;
+  background: @success-color !important;
+}

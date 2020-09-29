@@ -1,0 +1,36 @@
+.st-card-bg-radio {
+  .custom {
+    margin-right: 24px;
+    &:nth-of-type(4) {
+      margin-right: 32px;
+    }
+  }
+  &__image {
+    margin-top: 14px;
+  }
+  &__upload {
+    display: flex;
+  }
+  &__describe {
+    margin-left: 8px;
+    .fz(12px);
+    .lh(17px);
+    .c(#9bacb9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    height: 108px;
+    &-tip {
+      .mg-t(4px);
+      .c(@title);
+    }
+  }
+  .custom .ant-radio-inner:after {
+    transform: scale(0.875);
+    opacity: 1;
+    .s(12px, 12px);
+    left: 1px;
+    top: 1px;
+  }
+}

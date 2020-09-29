@@ -1,0 +1,84 @@
+.h5-form-shopinfo-component {
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgba(37, 42, 46, 1);
+  }
+  &__desc {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(37, 42, 46, 1);
+    &-text {
+      margin-top: 4px;
+      color: rgba(155, 172, 185, 1);
+    }
+  }
+  &__list {
+    margin-top: 24px;
+  }
+  &__box {
+    position: relative;
+    width: 180px;
+    height: 148px;
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    float: left;
+    margin-right: 16px;
+    .h5-form-shopinfo-component__del {
+      display: none;
+    }
+    &:hover {
+      .h5-form-shopinfo-component__del {
+        display: block;
+      }
+    }
+  }
+  &__upload {
+    flex: none;
+  }
+  &__cascader {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border: 1px solid rgba(230, 233, 239, 1);
+    border-top: 0;
+    &-label {
+      flex: none;
+      width: 42px;
+      font-size: 14px;
+      line-height: 22px;
+      color: rgba(37, 42, 46, 1);
+    }
+  }
+  &__del {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 2px;
+    right: 2px;
+    background: rgba(255, 240, 237, 1);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  &__edit-img {
+    position: relative;
+    width: 180px;
+    font-size: 12px;
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  &__draggable-icon {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+  }
+}

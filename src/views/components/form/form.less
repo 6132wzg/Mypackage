@@ -1,0 +1,77 @@
+// 表单重置
+.st-form {
+  width: 100%;
+  &--label-auto {
+    .ant-form-item-label label {
+      .mg-r(0);
+      .lh(14px);
+      display: inline-block;
+      white-space: normal;
+    }
+  }
+}
+
+.st-form-item {
+  display: flex;
+
+  .ant-form-item-label {
+    .lh(32px);
+    .w(88px);
+    flex-shrink: 0;
+    /**
+    * 统一没有: 号
+    */
+    label:after {
+      content: none;
+    }
+  }
+
+  .ant-form-item-control-wrapper {
+    flex: 1;
+    .pd-l(24px);
+    /**
+    * make bfc for table
+    */
+    // overflow: auto;
+  }
+  .ant-form-item-control {
+    .lh(32px);
+  }
+  // 修正checkbox位置
+  .ant-checkbox-wrapper {
+    .mg-l(0);
+    .mg-r(16px);
+  }
+  // 修正radio位置
+  .ant-radio-wrapper {
+    .mg-l(0);
+    .mg-r(16px);
+  }
+
+  &--type-text {
+    .ant-form-item-label {
+      .lh(20px);
+    }
+    .ant-form-item-control {
+      .lh(20px);
+    }
+  }
+}
+
+// 统一新增上传的图片样式
+.page-course-photo-des {
+  width: 158px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #000;
+  opacity: 0.25;
+  line-height: 17px;
+  .page-course-item {
+    display: flex;
+  }
+  .page-course-item-tip {
+    width: 10px;
+  }
+}

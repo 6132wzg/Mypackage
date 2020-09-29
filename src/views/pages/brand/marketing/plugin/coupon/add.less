@@ -1,0 +1,73 @@
+.brand-marketing-coupon-add {
+  &__left {
+    .w(350px);
+    height: 100%;
+    .bg(@bg-gray);
+    .st-h5-container {
+      position: fixed;
+    }
+    &-coupon {
+      box-shadow: 0px 2px 20px 0px rgba(223, 225, 231, 0.5);
+      border-radius: 8px;
+      background: @white;
+      margin: 40px;
+      &-top {
+        display: flex;
+        .h(167px);
+        .bg(rgba(255, 80, 90, 1));
+        .fz(22px);
+        .lh(32px);
+        .c(#fff);
+        border-radius: 8px 8px 0 0;
+        &-left {
+          .w(220px);
+          border-right: 1px dashed rgba(255, 255, 255, 0.59);
+          .ta-c();
+          .pd-t(36px);
+          &-number {
+            .fz(56px);
+            .lh(63px);
+          }
+        }
+        &-right {
+          flex: 1;
+          .pd-t(46px);
+          .pd-lr(32px);
+        }
+      }
+      &-bottom {
+        .lh(38px);
+        .fz(24px);
+        padding: 25px 16px;
+        color: rgba(153, 153, 153, 1);
+      }
+    }
+  }
+  &__line {
+    margin: 8px 24px 24px;
+  }
+  &__input {
+    width: 360px;
+  }
+  &__wrap-input {
+    float: right;
+    margin: 0;
+  }
+  &__radio-input {
+    width: 80px;
+    margin: 0 8px;
+  }
+  &__tip {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: -3px;
+    color: @text-light;
+    line-height: 22px;
+  }
+  &__select {
+    display: block;
+    > div {
+      width: 360px;
+    }
+  }
+}

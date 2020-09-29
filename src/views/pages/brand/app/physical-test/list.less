@@ -1,0 +1,67 @@
+.brand-app-physical-test {
+  &__main {
+    .pd(24px);
+    .bg(#fff);
+  }
+  &__bodyImg {
+    .mg-b(32px);
+    &-header {
+      display: flex;
+      .mg-b(16px);
+      &__title {
+        .fz(14px);
+        .lh(22px);
+        .c(#252a2e);
+      }
+      &__subtitle {
+        .fz(14px);
+        .lh(22px);
+        .c(#9bacb9);
+        .mg-l(16px);
+      }
+    }
+    &-content {
+      &-tag {
+        display: flex;
+        flex-wrap: wrap;
+        &-item {
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+          border: 1px solid @border-color;
+          background-color: #f7f9fc;
+          .pd(0 8px);
+          .fz(12px);
+          .lh(20px);
+          .h(22px);
+          .bd-r(4px);
+          .mg-r(8px);
+        }
+      }
+    }
+  }
+  &__physicalTestTable {
+    .mg-b(32px);
+    &-header {
+      display: flex;
+      .mg-b(16px);
+      &__title {
+        .fz(14px);
+        .lh(22px);
+        .c(#252a2e);
+      }
+      &__subtitle {
+        .fz(14px);
+        .lh(22px);
+        .c(#9bacb9);
+        .mg-l(16px);
+      }
+    }
+  }
+  .st-form-table--hoverable.st-form-table--hoverable tbody > tr.dragged {
+    background: #f0f6ff;
+  }
+  .st-form-table tr.canDrag {
+    cursor: move;
+  }
+}

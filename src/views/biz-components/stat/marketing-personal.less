@@ -1,0 +1,58 @@
+.stat-marketing-persona {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &__avatar {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+  &__area {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__tag-box {
+    position: absolute;
+    width: 80px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:nth-of-type(1) .stat-marketing-persona__tag {
+      background: linear-gradient(90deg, #22b4ce 0%, #39e1c7 100%);
+    }
+    &:nth-child(2) .stat-marketing-persona__tag {
+      background: linear-gradient(270deg, #739ffb 0%, @primary-color 100%);
+    }
+    &:nth-child(3) .stat-marketing-persona__tag {
+      background: linear-gradient(264deg, #c87fff 0%, #798aff 100%);
+    }
+    &:nth-child(4) .stat-marketing-persona__tag {
+      background: linear-gradient(90deg, #22b4ce 0%, #39e1c7 100%);
+    }
+    &:nth-child(5) .stat-marketing-persona__tag {
+      background: linear-gradient(270deg, #739ffb 0%, @primary-color 100%);
+    }
+    &:nth-child(6) .stat-marketing-persona__tag {
+      background: linear-gradient(264deg, #c87fff 0%, #798aff 100%);
+    }
+    &:nth-child(7) .stat-marketing-persona__tag {
+      background: linear-gradient(270deg, #739ffb 0%, @primary-color 100%);
+    }
+  }
+  &__tag {
+    position: absolute;
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    padding: 5px 16px;
+    border-radius: 16px 0px 16px 0px;
+
+    transform: rotate(0deg) translate(0px);
+  }
+}

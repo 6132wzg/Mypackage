@@ -1,0 +1,254 @@
+// 秒杀公共样式
+.h5-phone-seckill-item-component {
+  display: flex;
+  flex-direction: column;
+  &__header {
+  }
+  &__content {
+    display: flex;
+  }
+  // 商品封面
+  &__image {
+    position: relative;
+    overflow: hidden;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      object-fit: cover;
+      image-rendering: pixelated;
+    }
+    // 商品类型标签
+    &-tag {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  // 商品详情
+  &__info {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // 商品名称
+    &-name {
+      margin: 8px 0;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 40px;
+      color: #222222;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+    // 商品描述
+    &-desc {
+      font-size: 24px;
+      line-height: 32px;
+      color: #666666;
+    }
+    // 商品分类标签
+    &-tags {
+      // display: -webkit-box;
+      // -webkit-box-orient: vertical;
+      // -webkit-line-clamp: 1;
+      // overflow: hidden;
+      display: flex;
+    }
+    &-tag {
+      margin-right: 8px;
+      // padding: 4px;
+      font-size: 22px;
+      line-height: 26px;
+      color: #666666;
+      background: #f4f5f6;
+      border-radius: 2px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    // 商品信息-底部最后一行
+    &-bottom {
+      position: relative;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      &-side {
+        display: flex;
+        align-items: flex-end;
+      }
+      // 商品信息-底部最后一行----标签
+      &-tag {
+        display: inline-block;
+        padding: 2px 4px;
+        color: #ff505a;
+        font-size: 22px;
+        border-radius: 4px;
+        border: 2px solid #ff505a;
+        z-index: 1;
+      }
+      // 商品信息-底部最后一行----划线价
+      &-line-price {
+        display: inline-block;
+        line-height: 32px;
+        font-size: 24px;
+        color: #999999;
+        text-decoration: line-through;
+        z-index: 1;
+      }
+      // 商品信息-底部最后一行----真实价格
+      &-price {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-right: 16px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 32px;
+        font-weight: bold;
+        color: #ff505a;
+        z-index: 1;
+        // 商品信息-底部最后一行----金额单位
+        &::before {
+          content: '¥';
+          margin-right: 4px;
+          font-size: 24px;
+          line-height: 32px;
+          font-weight: bold;
+          color: #ff505a;
+        }
+      }
+      // 商品信息-底部最后一行----标注
+      &-mark {
+        display: inline-block;
+        line-height: 32px;
+        color: #ffffff;
+        font-size: 24px;
+        z-index: 1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  // 秒杀竖排布局样式
+  &__column {
+    margin-top: 16px;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px 0px rgba(102, 70, 10, 0.2);
+    border-radius: 8px;
+    border: 2px solid #efefef;
+    .h5-phone-seckill-item-component {
+      &__header {
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+        height: 48px;
+        line-height: 32px;
+        color: #ffffff;
+        font-size: 24px;
+        border-radius: 8px 8px 0 0;
+        background: linear-gradient(270deg, #ff71a8 0%, #ff327c 100%);
+        & > span:first-child {
+          flex: 0 0 atuo;
+        }
+        .clock-timer {
+          margin-left: 8px;
+          padding: 0 24px;
+          height: 32px;
+          background: rgba(167, 20, 77, 0.5);
+          border-radius: 16px;
+        }
+      }
+      &__content {
+        padding: 24px;
+      }
+      &__image {
+        width: 200px;
+        height: 150px;
+        &-tag {
+          top: 8px;
+        }
+      }
+      &__info {
+        padding-left: 16px;
+        .clock-timer {
+          display: none;
+        }
+        &-bottom {
+          height: 48px;
+          align-items: flex-start;
+          &-mark {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 104px;
+            height: 48px;
+            &--nostart,
+            &--complete {
+              color: #999999;
+              background-image: none;
+            }
+            &--runing {
+              background-image: url('https://styd-frontend.oss-cn-shanghai.aliyuncs.com/images/index_seckill_btn.png');
+            }
+          }
+        }
+      }
+    }
+  }
+  // 秒杀横排布局样式
+  &__row {
+    padding: 24px;
+    border-radius: 8px;
+    border: 2px solid #efefef;
+    box-shadow: 0px 4px 12px 0px rgba(207, 82, 231, 0.2);
+    background: #ffffff;
+    .h5-phone-seckill-item-component {
+      &__header {
+        display: none;
+      }
+      &__content {
+        flex-direction: column;
+      }
+      &__image {
+        width: 300px;
+        height: 225px;
+        &-tag {
+          top: 16px;
+        }
+      }
+      &__info {
+        flex: 1;
+        &-bottom {
+          flex-direction: column;
+          height: 104px;
+          &-mark {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 16px;
+            padding: 0 16px;
+            height: 48px;
+            line-height: 32px;
+            color: #ffffff;
+            font-size: 24px;
+            &--nostart,
+            &--complete {
+              background-image: url('https://styd-frontend.oss-cn-shanghai.aliyuncs.com/images/index-seckill-time-bg1.png');
+            }
+            &--runing {
+              background-image: url('https://styd-frontend.oss-cn-shanghai.aliyuncs.com/images/index-seckill-time-bg2.png');
+            }
+          }
+        }
+      }
+    }
+  }
+}

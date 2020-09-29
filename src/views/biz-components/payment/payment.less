@@ -1,0 +1,74 @@
+.st-payment {
+  .mg-b(24px);
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__title {
+    height: 22px;
+    font-size: 14px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(37, 42, 46, 1);
+    line-height: 22px;
+    .mg-b(16px);
+  }
+  &__item {
+    width: calc(25% - 6px);
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid rgba(205, 212, 223, 1);
+    .mg-b(8px);
+    .mg-r(8px);
+    .pd-lr(16px);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    &-active {
+      border: 2px solid rgba(63, 102, 246, 1);
+      .pd-lr(15px);
+    }
+    &-icon {
+      .s(32px, 32px);
+      .mg-r(4px);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      &-deposit {
+        background-image: url('~@/assets/img/payment/payment_deposit@2x.png');
+      }
+      &-wechat {
+        background-image: url('~@/assets/img/payment/payment_wechat@2x.png');
+      }
+      &-alipay {
+        background-image: url('~@/assets/img/payment/payment_alipay@2x.png');
+      }
+      &-bank {
+        background-image: url('~@/assets/img/payment/payment_bank@2x.png');
+      }
+      &-pos {
+        background-image: url('~@/assets/img/payment/payment_pos@2x.png');
+      }
+      &-cash {
+        background-image: url('~@/assets/img/payment/payment_cash@2x.png');
+      }
+      &-other {
+        background-image: url('~@/assets/img/payment/payment_other@2x.png');
+      }
+      &-stpos {
+        background-image: url('~@/assets/img/payment/payment_stpos@2x.png');
+      }
+    }
+    &-name {
+      font-size: 14px;
+      color: rgba(62, 77, 92, 1);
+      line-height: 20px;
+      word-break: break-all;
+    }
+  }
+  &__item:nth-of-type(4n) {
+    .mg-r(0);
+  }
+  &__deposit {
+    .mg-t(24px);
+  }
+}
