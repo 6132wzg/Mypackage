@@ -20,18 +20,18 @@ GIT_BRANCH_ENV = $(if $(GIT_BRANCH),$(GIT_BRANCH),$(shell git rev-parse --abbrev
 
 connect:
 	docker run -it --rm \
-	--dns=101.132.119.70 \
+	--dns=106.14.238.85 \
 	-v $(PWD):/app \
 	-v $(NAME)_nm:/app/node_modules \
 	$(DOCKER_IMAGE)
 
 # 构建脚本
 build:
-	# dns=101.132.119.70 为了修正dns解析
+	# dns=106.14.238.85 为了修正dns解析
 	# 传递环境变量 GIT_BRANCH_ENV
 	docker run -i --rm \
 	--cpus=2 \
-	--dns=101.132.119.70 \
+	--dns=106.14.238.85 \
 	-v $(PWD):/app \
 	-v $(NAME)_nm:/app/node_modules \
 	-e GIT_BRANCH=$(GIT_BRANCH_ENV) \
