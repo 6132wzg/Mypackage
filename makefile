@@ -30,7 +30,7 @@ build :
 	# dns=106.14.238.85 为了修正dns解析
 	# 传递环境变量 GIT_BRANCH_ENV
 	docker run -i --rm \
-	--cpus=2 \
+	--cpus=1 \
 	--dns=106.14.238.85 \
 	-v $(PWD):/app \
 	-v $(NAME)_nm:/app/node_modules \
