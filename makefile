@@ -18,7 +18,7 @@ GIT_BRANCH_ENV = $(if $(GIT_BRANCH),$(GIT_BRANCH),$(shell git rev-parse --abbrev
 
 .PHONY: build
 
-connect:
+connect :
 	docker run -it --rm \
 	--dns=106.14.238.85 \
 	-v $(PWD):/app \
@@ -26,7 +26,7 @@ connect:
 	$(DOCKER_IMAGE)
 
 # 构建脚本
-build:
+build :
 	# dns=106.14.238.85 为了修正dns解析
 	# 传递环境变量 GIT_BRANCH_ENV
 	docker run -i --rm \
@@ -41,7 +41,7 @@ build:
 # 同步文件
 # @params {to} 推送服务器主机名
 # @example :: make rsync to=saas-dev
-rsync:
+rsync :
 	ssh $(to) -t "mkdir -p $(CONTENT_PATH)/$(NAME)"
 	rsync -auz --exclude=.git $(PWD)/ $(to):$(CONTENT_PATH)/$(NAME)
 
@@ -54,23 +54,23 @@ rsync-branch:
 # 切换软连接
 # @params {to} 推送服务器主机名
 # @example :: make release to=saas-dev
-release:
+release :
 	ssh $(to) -t "mkdir -p $(HTDOCS_PATH)"
 	ssh $(to) -t "ln -sfTv $(CONTENT_PATH)/$(NAME) $(HTDOCS_PATH)/$(NAME)"
 
 # 切换项目分支软链接
-release-branch:
+release-branch :
 	ssh $(to) -t "mkdir -p $(HTDOCS_PATH)/$(NAME)_branches"
 	ssh $(to) -t "ln -sfTv $(CONTENT_PATH)/$(NAME)_branches/$(GIT_BRANCH_ENV) $(HTDOCS_PATH)/$(NAME)_branches/$(GIT_BRANCH_ENV)"
 
-clean1:
+clean1 :
 	sudo docker run -i --rm \
 	-v $(PWD):/app \
 	$(DOCKER_IMAGE) rm -r ./dist/
 
-clean2:
+clean2 :
 	sudo docker run -i --rm \
 	-v $(PWD):/app \
 	$(DOCKER_IMAGE) rm -r ./docs/.vuepress/dist/
 
-clean: clean1
+clean : clean1
