@@ -29,7 +29,7 @@ connect :
 build :
 	# dns=106.14.238.85 为了修正dns解析
 	# 传递环境变量 GIT_BRANCH_ENV
-	docker run -i --rm \
+	sudo docker run -i --rm \
 	--cpus=1 \
 	--dns=106.14.238.85 \
 	-v $(PWD):/app \
