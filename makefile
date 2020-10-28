@@ -11,7 +11,7 @@ HTDOCS_PATH = /data/htdocs
 NGINX_CONF_PATH = /application/nginx/conf
 
 # 使用的docker镜像
-DOCKER_IMAGE = root
+DOCKER_IMAGE = alps
 
 # 从Jenkins环境变量process.env.GIT_BRANCH中或从git命令中获取分支名称
 GIT_BRANCH_ENV = $(if $(GIT_BRANCH),$(GIT_BRANCH),$(shell git rev-parse --abbrev-ref HEAD))
@@ -29,7 +29,7 @@ connect :
 build :
 	# dns=106.14.238.85 为了修正dns解析
 	# 传递环境变量 GIT_BRANCH_ENV
-	sudo docker run -i --rm \
+	docker run -i --rm \
 	--cpus=1 \
 	--dns=106.14.238.85 \
 	-v $(PWD):/app \
