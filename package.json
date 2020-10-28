@@ -17,7 +17,7 @@
     "dev:pre:brand": "cross-env LOCAL_API_ENV=pre PAGE_ENV=brand gulp dev",
     "dev:pre:shop": "cross-env LOCAL_API_ENV=pre PAGE_ENV=shop gulp dev",
     "dev:prod": "cross-env LOCAL_API_ENV=prod gulp dev",
-    "init": "yarn install",
+    "init": "npm run install",
     "inspect": "vue-cli-service inspect > inspect.js",
     "inspect:prod": "vue-cli-service inspect --mode production > inspect.js",
     "less-base": "gulp less-base",
