@@ -11,7 +11,7 @@ HTDOCS_PATH = /data/htdocs
 NGINX_CONF_PATH = /application/nginx/conf
 
 # 使用的docker镜像
-DOCKER_IMAGE = alps
+DOCKER_IMAGE = root
 
 # 从Jenkins环境变量process.env.GIT_BRANCH中或从git命令中获取分支名称
 GIT_BRANCH_ENV = $(if $(GIT_BRANCH),$(GIT_BRANCH),$(shell git rev-parse --abbrev-ref HEAD))
