@@ -15,6 +15,7 @@ pipeline {
     }
     stage('Build') {
       steps {
+        sh 'echo $PATH'
         sh 'make build'
       }
     }
