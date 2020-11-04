@@ -36,7 +36,9 @@ build :
 	# -v $(NAME)_nm:/app/node_modules \
 	# -e GIT_BRANCH=$(GIT_BRANCH_ENV) \
 	# $(DOCKER_IMAGE) \
-	
+
+	node -v
+	npm -v
 	npm run ci
 
 # 同步文件
