@@ -39,6 +39,7 @@ build :
 
 	node -v
 	npm -v
+	echo $PATH
 	npm run ci
 
 # 同步文件
