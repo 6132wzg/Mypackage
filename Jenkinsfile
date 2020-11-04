@@ -18,15 +18,15 @@ pipeline {
         sh 'make build'
       }
     }
-    stage('to=dev') {
-      steps {
-        sh 'make rsync to=alps_w'
-        sh 'make release to=alps_w'
-        sh 'make rsync-branch to=alps_w'
-        sh 'make release-branch to=alps_w'
-        echo "https://jenkins.alps_w.xyz"
-      }
-    }
+    // stage('to=dev') {
+    //   steps {
+    //     sh 'make rsync to=alps_w'
+    //     sh 'make release to=alps_w'
+    //     sh 'make rsync-branch to=alps_w'
+    //     sh 'make release-branch to=alps_w'
+    //     echo "https://jenkins.alps_w.xyz"
+    //   }
+    // }
     // stage('to=test') {
     //   steps {
     //     sh 'make rsync to=saas-test'
@@ -57,7 +57,7 @@ pipeline {
   post {
     always {
       // 始终删除构建过程中产出的文件
-      sh 'make clean'
+      // sh 'make clean'
     }
   }
 }
